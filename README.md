@@ -1,4 +1,9 @@
 LCDBATRON
 =========
 
-A NETMF library for the LCD Batron.
+Tags: LCD 2x16, I2C, PCF2119, Netduino, C#, Visual Studio.
+
+Target: Netduino, Netduino plus 2.
+
+This library can be use to control the LCD 2X16 I2C with Netduino+ V2. Code written in C# with Visual Studio 2010. Example test program.
+
