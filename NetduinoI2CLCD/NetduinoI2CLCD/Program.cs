@@ -23,7 +23,7 @@ namespace TestNetduinoI2CLCD
             lcd.ClearScreen();
             lcd.PutString(3, 0, "SSI...");
             lcd.PutChar(11, 0, 0x4E);
-            lcd.PutString(2, 1, "Bonjour!!");
+            lcd.PutString(2, 1, "Bonjour");
             // Jauges linéaires virtuelles
             for (byte w = InitJauge; w < 0x60; w++)
                 lcd.PutChar((byte)(w - 0x51), 1, w);
