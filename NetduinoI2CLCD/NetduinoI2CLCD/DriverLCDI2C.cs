@@ -8,13 +8,20 @@ using System;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 
-namespace BatronLCD
+namespace I2CLCD
 {
     class I2CLcd
     {
         // Attributs
         private I2CDevice.Configuration ConfigI2CLcd;
         private I2CDevice BusI2C;
+        private ushort i2c_Add_7bits = 0x3A;
+        
+        public enum LcdManufacturer
+        {
+            MIDAS = 0x3A,
+            BATRON =0x3B
+        }
 
         public enum CursorType
         {
@@ -25,29 +32,62 @@ namespace BatronLCD
 
 
         // Constructeurs
-        // this constructor assumes the default factory Slave Address = 0x3B
+        /// <summary>
+        /// This constructor assumes the default Midas factory Slave Address = 0x3A and bus frequency = 100kHz
+        /// </summary>
         public I2CLcd()
         {
-            ConfigI2CLcd = new I2CDevice.Configuration(0x3B, 100);
+            ConfigI2CLcd = new I2CDevice.Configuration(i2c_Add_7bits, 100);
         }
 
-        // This constructor allows user to specify the Slave Address and bus frequency = 100khz
+        /// <summary>
+        /// This constructor allows user to specify the Slave Address, bus frequency = 100khz
+        /// </summary>
+        /// <param name="I2C_Add_7bits">Manufacturer Adress I2C</param>
         public I2CLcd(ushort I2C_Add_7bits)
         {
-            ConfigI2CLcd = new I2CDevice.Configuration(I2C_Add_7bits, 100);
+            this.i2c_Add_7bits = I2C_Add_7bits;
+            ConfigI2CLcd = new I2CDevice.Configuration(i2c_Add_7bits, 100);
         }
 
-        // This constructor allows user to specify the Slave Address and bus frequency
+        /// <summary>
+        /// This constructor allows user to specify the LCD Manufacturer name, bus frequency = 100khz
+        /// </summary>
+        /// <param name="ManufacturerName">LCD Manufacturer Name</param>
+        public I2CLcd(LcdManufacturer ManufacturerName)
+        {
+            this.i2c_Add_7bits = (ushort)ManufacturerName;
+            ConfigI2CLcd = new I2CDevice.Configuration(i2c_Add_7bits, 100);
+        }
+
+        /// <summary>
+        /// This constructor allows user to specify the Slave Address and bus frequency
+        /// </summary>
+        /// <param name="I2C_Add_7bits">Manufacturer Adress I2C</param>
+        /// <param name="FreqBusI2C">Bus frequency</param>
         public I2CLcd(ushort I2C_Add_7bits, UInt16 FreqBusI2C)
         {
-            ConfigI2CLcd = new I2CDevice.Configuration(I2C_Add_7bits, 100);
+            this.i2c_Add_7bits = I2C_Add_7bits;
+            ConfigI2CLcd = new I2CDevice.Configuration(i2c_Add_7bits, FreqBusI2C = 100);
+        }
+
+        /// <summary>
+        /// This constructor allows user to specify the LCD Manufacturer name and bus frequency
+        /// </summary>
+        ///<param name="ManufacturerName">LCD Manufacturer Name</param>
+        /// <param name="FreqBusI2C">Bus frequency</param>
+        public I2CLcd(LcdManufacturer ManufacturerName, UInt16 FreqBusI2C=100)
+        {
+            this.i2c_Add_7bits = (ushort)ManufacturerName;
+            ConfigI2CLcd = new I2CDevice.Configuration(i2c_Add_7bits, FreqBusI2C);
         }
 
         // Méthodes publiques
         public void Init()
         {
             // Création d'un buffer et d'une transaction pour l'accès au circuit en écriture
-            byte[] outbuffer = new byte[] { 0x00, 0x34, 0x0d, 0x06, 0x35, 0x04, 0x10, 0x42, 0x9F, 0x34, 0x83, 0x02 };
+            byte[] outbuffer = new byte[]{ 0x00, 0x34, 0x0d, 0x06, 0x35, 0x05, 0x10, 0x42, 0x9F, 0x34, 0x83, 0x02 };
+            if (i2c_Add_7bits == (ushort)LcdManufacturer.BATRON) outbuffer[5] = 0x04; 
             I2CDevice.I2CTransaction WriteTransaction = I2CDevice.CreateWriteTransaction(outbuffer);
             // Tableaux des transactions 
             I2CDevice.I2CTransaction[] T_WriteBytes = new I2CDevice.I2CTransaction[] { WriteTransaction };
@@ -57,7 +97,10 @@ namespace BatronLCD
             BusI2C.Dispose(); // Déconnexion virtuelle de l'objet Lcd du bus I2C
         }
 
-        // Three cursor modes
+        /// <summary>
+        /// Three cursor modes
+        /// </summary>
+        /// <param name="posCursor"></param>
         public void SelectCursor(CursorType posCursor)
         {
             // Création d'un buffer et d'une transaction pour l'accès au circuit en écriture
@@ -71,7 +114,11 @@ namespace BatronLCD
             BusI2C.Dispose(); // Déconnexion virtuelle de l'objet Lcd du bus I2C                 
         }
 
-        // Set brightness  31 dark -> 0 light
+         
+        /// <summary>
+        /// Set brightness  31 dark -> 0 light
+        /// </summary>
+        /// <param name="bright"></param>
         public void SetBacklight(byte bright)
         {
             byte BLight = 0x40;
@@ -86,8 +133,11 @@ namespace BatronLCD
             BusI2C.Execute(T_WriteBytes, 1000);
             BusI2C.Dispose(); // Déconnexion virtuelle de l'objet Lcd du bus I2C   
         }
-
-        // Goto start of line 
+ 
+        /// <summary>
+        /// Goto start of line
+        /// </summary>
+        /// <param name="x"></param>
         public void LineBegin(byte x)
         {
             byte addr = 0x80;
@@ -102,8 +152,13 @@ namespace BatronLCD
             BusI2C.Execute(T_WriteBytes, 1000);
             BusI2C.Dispose(); // Déconnexion virtuelle de l'objet Lcd du bus I2C   
         }
-
-        // Write a line of text at x,y
+ 
+        /// <summary>
+        /// Write a line of text at x,y
+        /// </summary>
+        /// <param name="x_pos"></param>
+        /// <param name="y_pos"></param>
+        /// <param name="Text"></param>
         public void PutString(byte x_pos, byte y_pos, string Text)
         {
             
@@ -126,8 +181,13 @@ namespace BatronLCD
             BusI2C.Execute(T_WriteBytes, 1000);
             BusI2C.Dispose(); // Déconnexion virtuelle de l'objet Lcd du bus I2C   
         }
-
-        // Single character write at x,y
+ 
+        /// <summary>
+        /// Single character write at x,y
+        /// </summary>
+        /// <param name="x_pos"></param>
+        /// <param name="y_pos"></param>
+        /// <param name="z_char"></param>
         public void PutChar(byte x_pos, byte y_pos, byte z_char)
         {
             byte addr = 0x80;                 // This is for 16 x 2, adjust as nessesary
@@ -147,6 +207,9 @@ namespace BatronLCD
         }
 
         // Clear screen with 0xA0 not 0x20
+        /// <summary>
+        /// Clear screen
+        /// </summary>
         public void ClearScreen()                     // If you use built in Clr
         {                                             // the screen doen't clear
             byte[] clr = new byte[19];                // you just get arrows

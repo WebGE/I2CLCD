@@ -1,26 +1,23 @@
 ﻿using System;
 using System.Threading;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
+using I2CLCD;
 
-using BatronLCD;
-
-namespace NetduinoI2CLCD
+namespace TestNetduinoI2CLCD
 {
     public class Program
     {
         public static void Main()
-        {   // Pour accéder au bus I2C, relier le PCF8574 au connecteur TWI de la 
-            // carte Tinkerkit. Placer des résistances de rappel entre le +5V et les sortie SCL et SDA
-            byte y = 0x5A; // Etat initial d'un caractère personalisé "jauge"
-            byte addLcd_I2C = 0x3B; // Adresse (7 bits) du Lcd I2C Batron
+        {   // Pour accéder au bus I2C, relier le LCD au connecteur TWI de la carte Tinkerkit.
+            // Placer des résistances de rappel entre le +5V et les sorties SCL et SDA
+            byte InitJauge = 0x5A; // Etat initial d'un caractère personalisé "jauge"
             UInt16 Freq = 400; // Fréquence d'horloge du bus I2C en kHz
- 
-            // Création d'un objet Lcd I2C Batron
-            I2CLcd lcd = new I2CLcd(addLcd_I2C, Freq);
+
+            // Création d'un objet I2CLcd MIDAS MC21605E6W http://www.farnell.com/datasheets/1722538.pdf
+            I2CLcd lcd = new I2CLcd(I2CLcd.LcdManufacturer.MIDAS, Freq);
 
             // Initialisation du Lcd I2C
             lcd.Init();
+            lcd.SetBacklight(0x10);
 
             // Message
             lcd.ClearScreen();
@@ -28,7 +25,7 @@ namespace NetduinoI2CLCD
             lcd.PutChar(11, 0, 0x4E);
             lcd.PutString(2, 1, "Bonjour!!");
             // Jauges linéaires virtuelles
-            for (byte w = 0x5a; w < 0x60; w++)
+            for (byte w = InitJauge; w < 0x60; w++)
                 lcd.PutChar((byte)(w - 0x51), 1, w);
 
             while (true)
@@ -44,9 +41,9 @@ namespace NetduinoI2CLCD
                 Thread.Sleep(200);
 
                 // Démo jauge linéaire virtuelle
-                lcd.PutChar(0, 0, (byte)y);
-                y++;
-                if (y > 0x5F) y = 0x5A;
+                lcd.PutChar(0, 0, (byte)InitJauge);
+                InitJauge++;
+                if (InitJauge > 0x5F) InitJauge = 0x5A;
             }
         }
     }
