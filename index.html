@@ -92,19 +92,20 @@
 <hr>
 <p> Le dossier à télécharger (au format zip ou tar.gz) contient le répertoire d'un projet <strong>Microsoft Visual Studio Professionnel</strong> composé : </p>
 <ul>
-	<li>Du code de la classe PCF8574.</li>
+	<li>Du code de la classe I2CLCD.</li>
 	<li>D'un exemple d'utilisation de cette classe.</li>
 </ul>
-<p> Les fichiers program.cs et DriversPCF8574.cs pourront être recompilés avec <strong>Microsoft Visual Studio Express</strong>.</p>
+<p> Les fichiers program.cs et DriversI2CLCD.cs pourront être recompilés avec <strong>Microsoft Visual Studio Express</strong>.</p>
 <hr>
 <p><strong>Utilisation</strong></p>
 <hr>
 <ol>
-	<li><strong>Créer</strong> un objet en utilisant le constructeur PCF8574.</li>
-	<li><strong>Utiliser</strong> la méthode <em>WriteByte</em> pour écrire sur le port relié aux Leds et la méthode <em>ReadByte</em> pour lire le port relié aux boutons-poussoir.</li>
+	<li><strong>Créer</strong> un objet en utilisant un des constructeurs I2CLCD.</li>
+	<li><strong>Utiliser</strong> la méthode <em>Init</em> pour initialiser le LCD.</li>
+	<li><strong>Utiliser</strong> la méthode <em>ClearScreen</em> pour effacer l'écran.</li>
+	<li><strong>Utiliser</strong> les autres méthodes pour gérer l'afficahge.</li>
 </ol>
 <hr>
-
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
@@ -112,8 +113,5 @@
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-    
-
   </body>
 </html>
