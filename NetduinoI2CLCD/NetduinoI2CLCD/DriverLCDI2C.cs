@@ -5,7 +5,7 @@
 // Surveiller les prochaines versions du SDK 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 using System;
-using Microsoft.SPOT;
+using System.Threading;
 using Microsoft.SPOT.Hardware;
 
 namespace I2CLCD
@@ -20,7 +20,7 @@ namespace I2CLCD
         public enum LcdManufacturer
         {
             MIDAS = 0x3A,
-            BATRON =0x3B
+            BATRON = 0x3B
         }
 
         public enum CursorType
@@ -83,11 +83,24 @@ namespace I2CLCD
         }
 
         // Méthodes publiques
+        /// <summary>
+        /// Initialize the LCD before use 
+        /// </summary>
         public void Init()
         {
+            Thread.Sleep(200);
             // Création d'un buffer et d'une transaction pour l'accès au circuit en écriture
-            byte[] outbuffer = new byte[]{ 0x00, 0x34, 0x0d, 0x06, 0x35, 0x05, 0x10, 0x42, 0x9F, 0x34, 0x83, 0x02 };
-            if (i2c_Add_7bits == (ushort)LcdManufacturer.BATRON) outbuffer[5] = 0x04; 
+            // Nop, Function_set, Display_ctl, Entry_mode_set, Function_set, Disp_conf, Temp_ctl, Hv_gen, VLCD_Set, Function_Set, Set DDRAM, Return Home
+            // Configuration pour un afficheur MIDAS par défaut
+            byte[] outbuffer = new byte[] { 0x00, 0x34, 0x0d, 0x06, 0x35, 0x05, 0x10, 0x40, 0x99, 0x34, 0x83, 0x02 };
+            
+            if (i2c_Add_7bits == (ushort)LcdManufacturer.BATRON)
+            {
+                outbuffer[5] = 0x04; //Disp_conf
+                outbuffer[7] = 0x42; // Hv_gen
+                outbuffer[8] = 0x9F; //VLCD_Set
+            }
+                                   
             I2CDevice.I2CTransaction WriteTransaction = I2CDevice.CreateWriteTransaction(outbuffer);
             // Tableaux des transactions 
             I2CDevice.I2CTransaction[] T_WriteBytes = new I2CDevice.I2CTransaction[] { WriteTransaction };
@@ -116,15 +129,31 @@ namespace I2CLCD
 
          
         /// <summary>
-        /// Set brightness  31 dark -> 0 light
+        /// Set brightness  20 dark -> 0 light
         /// </summary>
         /// <param name="bright"></param>
         public void SetBacklight(byte bright)
         {
-            byte BLight = 0x40;
-            BLight += (byte)(bright & 0x1F);
+            byte BLight=0x99;
+            
+            if (i2c_Add_7bits == (ushort)LcdManufacturer.MIDAS)
+            {
+                if (bright > 20)
+                {
+                    bright = 20;
+                }
+                BLight = (byte)(0x90 + (byte)(bright & 0x1F));
+            }
+            else if (i2c_Add_7bits == (ushort)LcdManufacturer.BATRON)
+            { 
+                if (bright > 20)
+                {
+                    bright = 20;
+                }
+                BLight = (byte)(0x95 + (byte)(bright & 0x1F));
+            }            
             // Création d'un buffer et d'une transaction pour l'accès au circuit en écriture
-            byte[] outbuffer = new byte[] { 0, 0x35, 0x42, BLight, 0x34, 0xc };
+            byte[] outbuffer = new byte[] { 0, 0x35, BLight, 0x34 };
             I2CDevice.I2CTransaction WriteTransaction = I2CDevice.CreateWriteTransaction(outbuffer);
             // Tableaux des transactions 
             I2CDevice.I2CTransaction[] T_WriteBytes = new I2CDevice.I2CTransaction[] { WriteTransaction };
