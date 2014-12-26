@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Threading;
 using Microsoft.SPOT;
-using I2CLCD;
+
+using ToolBoxes;
 
 namespace TestNetduinoI2CLCD
 {
@@ -13,7 +14,8 @@ namespace TestNetduinoI2CLCD
             byte InitJauge = 0x5A; // Etat initial d'un caractère personalisé "jauge"
             UInt16 Freq = 100; // Fréquence d'horloge du bus I2C en kHz
 
-            // Création d'un objet I2CLcd MIDAS MC21605E6W http://www.farnell.com/datasheets/1722538.pdf
+            // Création d'un objet I2CLcd MIDAS MC21605E6W : http://www.farnell.com/datasheets/1722538.pdf
+            // Documentation de la classe I2CLcd : http://webge.github.io/LCDI2C/
             I2CLcd lcd = new I2CLcd(I2CLcd.LcdManufacturer.MIDAS, Freq);
 
             // Initialisation du Lcd I2C

@@ -8,7 +8,7 @@ using System;
 using System.Threading;
 using Microsoft.SPOT.Hardware;
 
-namespace I2CLCD
+namespace ToolBoxes
 {
     class I2CLcd
     {
