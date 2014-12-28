@@ -10,7 +10,7 @@ using Microsoft.SPOT.Hardware;
 
 namespace ToolBoxes
 {
-    class I2CLcd
+    public class I2CLcd
     {
         // Attributs
         private I2CDevice.Configuration ConfigI2CLcd;
