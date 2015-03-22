@@ -1,0 +1,16 @@
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\le\I2CLCD.dll
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\be\I2CLCD.dll
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\le\I2CLCD.pdb
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\be\I2CLCD.pdb
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\I2CLCD.dll
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\I2CLCD.pdb
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\le\I2CLCD.pe
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\le\I2CLCD.pdbx
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\be\I2CLCD.pe
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\be\I2CLCD.pdbx
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\obj\Debug\be\I2CLCD.pe
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\obj\Debug\be\I2CLCD.pdbx
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\obj\Debug\le\I2CLCD.pe
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\obj\Debug\le\I2CLCD.pdbx
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\obj\Debug\I2CLCD.dll
+C:\Users\Philippe\Documents\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\obj\Debug\I2CLCD.pdb
