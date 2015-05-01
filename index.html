@@ -30,18 +30,17 @@
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>PCF2119 : LCD controllers/drivers</h3><hr/>
 <ul>
 	<li><strong>Présentation</strong></li>
-	<p>Le PCF2119 est un circuit intégré destiné à la commande des matrices de points 5x8 des lcd 2x16 ou 1x32 via un bus I2C.</p>
-	<li><strong>Exemple : Afficheur MIDAS - MC21605E6W-SPTLYI - LCD 2X16 STN LED B/L Y/VERT I2C I/F</strong></li>
+	<p>Le PCF2119 est un circuit intégré destiné à la commande des matrices de points 5x8. Il est utilisé par les afficheurs à cristaux liquides (lcd) 2x16 ou 1x32. On y accède via un bus I2C. Un exemple d'afficheur utilisant ce circuit est présenté ci-dessous.</p>
+	<li><strong>MIDAS - MC21605E6W-SPTLYI - LCD 2X16 STN LED B/L Y/VERT I2C I/F</strong></li>
 	<p align="center"><img src="http://fr.farnell.com/productimages/farnell/standard/2342652-40.jpg" /></p>
 	<li><strong>Documentation: </strong><a href="http://www.farnell.com/datasheets/1722538.pdf" target="_blank">pdf</a></li>
 	<li><strong>Distributeur</strong> : <a href="http://fr.farnell.com/midas/mc21605e6w-sptlyi/lcd-2x16-stn-led-b-l-vert-i2c-i/dp/2342652" target="_blank" >Farnell</a></li>
-  <p>Il peut être utiliser comme dans l'exemple ci-dessous.</p>
 </ul>
 <hr/>
-<h3>Exemple d'IHM</h3>
-<p align="center"><img src="https://lh3.googleusercontent.com/VbQQzAQLCVlf74Hweaj5Y8AMZdqF8XHmvvpp8jQTOmc=w203-h207-p-no" width="50%" height="50%"></p>
-<p>Afficheur I2C 2x16 BATRON ou MIDAS</p> 
-<p>Les huit Leds et les huit boutons-poussoir sont commandés par deux PCF8574 : <a href="http://webge.github.io/PCF8574/">Page à voir</a></p> 
+<h3>IHM SSI</h3>
+<p align="center"><img src=https://lh6.googleusercontent.com/-DEtJD_G9Qy8/VUNNsubjwVI/AAAAAAAABXk/I3VgCwNuRsc/w380-h377-no/SSI2.jpg></p>
+<p>La carte SSI comprend un afficheur I2C 2x16 BATRON ou MIDAS,</p> 
+<p>huit Leds et huit boutons-poussoir connectés à deux PCF8574 : <a href="http://webge.github.io/PCF8574/">A voir</a></p> 
 <hr/>
 <h3>
 <a name="carte-netduino-de-secret-labs" class="anchor" href="#carte-netduino-de-secret-labs" target="_blank"><span class="octicon octicon-link"></span></a>Carte NetDuino plus 2 </h3><h5>Secret Labs</h5>
@@ -57,7 +56,7 @@
 	<li><strong>Framework</strong> : micro framework .NET (NETMF)</li>
 	<li><strong>Langage de programmation</strong> : C#</li>
 </ul>
-<p align="center"><img src="http://cdn.netduino.com/images/hardware/netduino2/photo_overhead.gif" alt="Netduino+ 2"></p>
+<p align="center"><img src="https://lh4.googleusercontent.com/-r-2bq_1YFzw/VUNMy1EODoI/AAAAAAAABXU/q20WYrAvnDw/w350-h280-no/NETDuino2plus.JPG" alt="Netduino+ 2"></p>
 <ul>
 	<li><strong>Sites à consulter</strong>: <a href="http://netduino.com/netduinoplus2/specs.htm" target="_blank">Netduino</a>, <a href="http://www.netmf.com/" target="_blank">NETMF</a></li>
 	<li><strong>Distributeurs</strong> : <a href="http://www.robotshop.com/en/catalogsearch/result/?q=netduino&order=stats_sales_order_count&dir=desc" target="_blank">RobotShop</a>, <a href="http://www.mouser.fr/Search/Refine.aspx?Keyword=netduino" target="_blank">Mouser Electronics</a></li>
@@ -212,7 +211,7 @@
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_method_VS.png"></td>
 	<td><strong>void SetBacklight</strong>(<strong>byte</strong> <em>bright</em>)</td>
 	<td>
-		<p>Réglage du contraste de l'aficheur</p>
+		<p>Réglage du contraste de l'afficheur</p>
 		<p><em>bright</em>: 20 dark -> 0 light</p>
 	</td>
 </tr>
