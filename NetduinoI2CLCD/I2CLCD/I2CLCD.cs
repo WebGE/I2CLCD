@@ -17,13 +17,13 @@ namespace ToolBoxes
         private I2CDevice BusI2C;
         private ushort i2c_Add_7bits = 0x3A;
         
-        public enum LcdManufacturer
+        public enum LcdManufacturer:byte
         {
             MIDAS = 0x3A,
             BATRON = 0x3B
         }
 
-        public enum CursorType
+        public enum CursorType:byte
         {
             Hide,
             Underline,
