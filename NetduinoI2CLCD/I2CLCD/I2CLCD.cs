@@ -65,7 +65,7 @@ namespace ToolBoxes
         /// </summary>
         /// <param name="I2C_Add_7bits">Manufacturer Adress I2C</param>
         /// <param name="FreqBusI2C">Bus frequency</param>
-        public I2CLcd(ushort I2C_Add_7bits, UInt16 FreqBusI2C)
+        public I2CLcd(byte I2C_Add_7bits, UInt16 FreqBusI2C)
         {
             this.i2c_Add_7bits = I2C_Add_7bits;
             ConfigI2CLcd = new I2CDevice.Configuration(i2c_Add_7bits, FreqBusI2C = 100);
