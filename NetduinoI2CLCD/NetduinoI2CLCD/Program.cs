@@ -9,8 +9,7 @@ namespace TestNetduinoI2CLCD
     public class Program
     {
         public static void Main()
-        {   // Pour accéder au bus I2C, relier le LCD au connecteur TWI de la carte Tinkerkit.
-            // Placer des résistances de rappel entre le +5V et les sorties SCL et SDA
+        {   // Pour accéder au bus I2C, relier le LCD au hub I2C et le hub I2C au connecteur TWI de la carte Tinkerkit.
             byte InitJauge = 0x5A; // Etat initial d'un caractère personalisé "jauge"
             UInt16 Freq = 100; // Fréquence d'horloge du bus I2C en kHz
 
