@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ToolBoxes.I2CLcd">
+    <Position X="0.5" Y="0.5" Width="4.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="ToolBoxes.I2CLcd.LcdManufacturer">
+        <TypeIdentifier>
+          <NewMemberFileName>I2CLCD.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="ToolBoxes.I2CLcd.CursorType">
+        <TypeIdentifier>
+          <NewMemberFileName>I2CLCD.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAMAAgAAAAAQQEAAABAAAAAAAAABAAACgAAAAAA=</HashCode>
+      <FileName>I2CLCD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

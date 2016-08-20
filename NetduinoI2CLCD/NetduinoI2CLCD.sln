@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestI2CLCD", "NetduinoI2CLCD\TestI2CLCD.csproj", "{463D659B-CA83-45A8-9A9E-59AFEFA564F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I2CLCD", "I2CLCD\I2CLCD.csproj", "{3A098DA0-BC9E-4F8B-8722-E22CDF1007F7}"
