@@ -15,7 +15,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/WebGE/LCDI2C">View on GitHub</a>
           <h1 id="project_title">Contrôler un afficheur LCD 2x16 I2C (PCF2119)</h1>
-          <h2 id="project_tagline">Programme de test en C# et description de la classe I2CLcd destinés à une Netduino plus 2 et une Netduino 3</h2>
+          <h2 id="project_tagline">Programme de test en C# et description de la classe I2CLcd destinés à une Netduino plus 2 ou une Netduino 3</h2>
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/WebGE/LCDI2C/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/WebGE/LCDI2C/tarball/master">Download this project as a tar.gz file</a>
@@ -69,8 +69,8 @@
 </table>
 
 <ul>
-	<li><strong>Sites à consulter</strong>: <a href="http://netduino.com/netduinoplus2/specs.htm" target="_blank">Netduino</a>, <a href="http://www.netmf.com/" target="_blank">NETMF</a></li>
-	<li><strong>Distributeurs</strong> : <a href="http://www.robotshop.com/en/catalogsearch/result/?q=netduino&order=stats_sales_order_count&dir=desc" target="_blank">RobotShop</a>, <a href="http://www.mouser.fr/Search/Refine.aspx?Keyword=netduino" target="_blank">Mouser Electronics</a></li>
+	<li><strong>Sites à consulter</strong> : <a href="http://netduino.com/netduinoplus2/specs.htm" target="_blank">Netduino</a>, <a href="http://www.netmf.com/" target="_blank">NETMF</a></li>
+	<li><strong>Distributeurs</strong> : <a href="http://www.mouser.fr/Search/Refine.aspx?Keyword=netduino" target="_blank">Mouser Electronics</a></li>
 </ul>
 <hr/>
 <h3>Classe I2CLCD</h3>
@@ -123,12 +123,12 @@
 </tr>
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
-	<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits</em>, <strong>UInt16</strong> <em>Frequency</em>)</td>
+	<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
 	<td>Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits</em> est l'adresse I2C sur 7 bits attribuée à l'afficheur.  <br><em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz]. </td>
 </tr>
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
-	<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>, <strong>UInt16</strong> <em>Frequency</em>)</td>
+	<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
 	<td>Instancie un objet "I2CLcd". <em>ManufacturerName</em> est le nom du fabricant.<br/> Il correspond à l'adresse I2C du LCD :
 		<ul>
 			<li><strong>Midas</strong> (0x3a)</li>
