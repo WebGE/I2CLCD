@@ -47,4 +47,9 @@
       <Name>I2CLCD</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Doc_A_Consulter\IHMSSI.jpg" />
+    <Content Include="Lisez-moi.txt" />
+  </ItemGroup>
 </Project>

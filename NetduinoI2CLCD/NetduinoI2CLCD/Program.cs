@@ -11,7 +11,7 @@ namespace TestNetduinoI2CLCD
         public static void Main()
         {   // Pour accéder au bus I2C, relier le LCD au hub I2C et le hub I2C au connecteur TWI de la carte Tinkerkit.
             byte InitJauge = 0x5A; // Etat initial d'un caractère personalisé "jauge"
-            UInt16 Freq = 100; // Fréquence d'horloge du bus I2C en kHz
+            Int16 Freq = 100; // Fréquence d'horloge du bus I2C en kHz
 
             // Création d'un objet I2CLcd MIDAS MC21605E6W : http://www.farnell.com/datasheets/1722538.pdf
             // Documentation de la classe I2CLcd : http://webge.github.io/LCDI2C/
