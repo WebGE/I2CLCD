@@ -27,7 +27,7 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <hr/><h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Le PCF2119 : LCD controllers/drivers</h3><hr/>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Le circuit intégré PCF2119 : LCD controllers/drivers</h3><hr/>
 <ul>
 	<li><strong>Présentation</strong></li>
 	<p>Le PCF2119 est un circuit intégré destiné à la commande des matrices de points 5x8. Il est utilisé par les afficheurs à cristaux liquides (lcd) 2x16 ou 1x32. On y accède via un bus I²C. Un exemple d'afficheur utilisant ce circuit est présenté ci-dessous.</p>
@@ -68,7 +68,7 @@
 	</tr>
 	<tr>
 		<td align="center"><strong>Netduino + 2</strong></td>
-		<td  align="center"><strong>Netduino 3 wifi*</strong></td>
+		<td  align="center"><strong>Netduino 3 wifi* (compatible Gadgeteer)</strong></td>
 	</tr>
 </table>
 
@@ -115,12 +115,19 @@
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
 	<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits)</em></td>
-	<td>Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits</em> est l'adresse I2C sur 7 bits attribuée à l'afficheur. <br/> Fréquence du bus: 100kHz.</td>
+	<td>
+		Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits: </em>adresse I²C sur 7 bits attribuée à l'afficheur. <br/> 
+		<ul>
+			<li><strong>Midas</strong> (0x3a)</li>
+			<li><strong>Batron</strong> (0x3b)</li>
+		</ul>	
+		Fréquence du bus: 100kHz.
+	</td>
 </tr>
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
 	<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>)</td>
-	<td>Instancie un objet "I2CLcd". <em>ManufacturerName</em> est le nom du fabricant.<br/> Il correspond à l'adresse I2C du LCD :
+	<td>Instancie un objet "I2CLcd". <em>ManufacturerName: </em>nom du fabricant.<br/> Il correspond à l'adresse I²C du LCD :
 		<ul>
 			<li><strong>Midas</strong> (0x3a)</li>
 			<li><strong>Batron</strong> (0x3b)</li>
