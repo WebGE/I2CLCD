@@ -110,7 +110,7 @@
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
 	<td><strong>I2CLcd</strong>()</td>
-	<td>Instancie un objet "I2CLcd" avec les paramètres : <br/> Fabricant = Midas <br/> Fréquence du bus: 100kHz</td>
+	<td>Instancie un objet "I2CLcd" avec les paramètres : <br/> - Fabricant = Midas <br/> - Fréquence du bus: 100kHz</td>
 </tr>
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
@@ -138,7 +138,12 @@
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
 	<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
-	<td>Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits</em> est l'adresse I2C sur 7 bits attribuée à l'afficheur.  <br><em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz]. </td>
+	<td>Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits</em> est l'adresse I²C sur 7 bits attribuée à l'afficheur.  <br>
+		<ul>
+			<li><strong>Midas</strong> (0x3a)</li>
+			<li><strong>Batron</strong> (0x3b)</li>
+		</ul>	
+	<em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz]. </td>
 </tr>
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
@@ -164,17 +169,17 @@
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_enum_VS.png"></td>
 	<td><strong>LcdManufacturer</strong></td>
 	<td>
+		MIDAS : 0x3a (par défaut)
 		BATRON : 0x3b <br/>
-		MIDAS : 0x3a (par défaut)	
 	</td>
 </tr>
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_enum_VS.png"></td>
 	<td><strong>CursorType</strong></td>
 	<td>
-		Blink : clignotant (par défaut)<br/>
-		Hide : caché <br />
-		Underline : soulignement	
+		<strong><em>Blink</em></strong> : clignotant (par défaut)<br/>
+		<strong><em>Hide</em></strong> : caché <br />
+		<strong><em>Underline</em></strong> : soulignement	
 	</td>
 </tr>
 </table>
