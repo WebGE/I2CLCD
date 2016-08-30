@@ -15,7 +15,7 @@ namespace TestNetduinoI2CLCD
 
             // Création d'un objet I2CLcd MIDAS MC21605E6W : http://www.farnell.com/datasheets/1722538.pdf
             // Documentation de la classe I2CLcd : http://webge.github.io/LCDI2C/
-            I2CLcd lcd = new I2CLcd(I2CLcd.LcdManufacturer.MIDAS, Freq);
+            I2CLcd lcd = new I2CLcd(I2CLcd.LcdManufacturer.BATRON, Freq);
 
             // Initialisation du Lcd I2C
             lcd.Init(); lcd.ClearScreen();

@@ -37,15 +37,12 @@
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="I2CLCD">
+      <HintPath>..\I2CLCD\bin\Release\I2CLCD.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.SPOT.Hardware" />
     <Reference Include="Microsoft.SPOT.Native" />
     <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\I2CLCD\I2CLCD.csproj">
-      <Project>{3A098DA0-BC9E-4F8B-8722-E22CDF1007F7}</Project>
-      <Name>I2CLCD</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
