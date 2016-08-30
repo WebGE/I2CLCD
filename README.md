@@ -1,9 +1,12 @@
 LCDI2C
 =========
 
-Tags: LCD 2x16,BATRON, MIDAS, I2C, PCF2119, Netduino, C#, Visual Studio.
+Tags: I²C, LCD 2x16,BATRON, MIDAS, I2C, PCF2119, Netduino, C#, Visual Studio.
 
 Target: Netduino, Netduino plus 2, Netduino 3.
 
 This library can be use to control a LCD 2X16 I2C with Netduino+ V2. Code written in C# with Visual Studio . Example test program.
 
+Code written in C# with Visual Studio 2013.
+
+NetduinoI2CLCD : Example test program.
