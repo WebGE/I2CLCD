@@ -113,12 +113,12 @@
 	<td><strong>Description</strong></td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>I2CLcd</strong>()</td>
 	<td>Instancie un objet "I2CLcd" avec les paramètres : <br/> - Fabricant = Midas <br/> - Fréquence du bus: 100kHz</td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits)</em></td>
 	<td>
 		Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits: </em>adresse I²C sur 7 bits attribuée à l'afficheur. <br/> 
@@ -130,7 +130,7 @@
 	</td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>)</td>
 	<td>Instancie un objet "I2CLcd". <em>ManufacturerName: </em>nom du fabricant.<br/> Il correspond à l'adresse I²C du LCD :
 		<ul>
@@ -141,7 +141,7 @@
 	</td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
 	<td>Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits</em> est l'adresse I²C sur 7 bits attribuée à l'afficheur.  <br>
 		<ul>
@@ -151,7 +151,7 @@
 	<em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz]. </td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
 	<td>Instancie un objet "I2CLcd". <em>ManufacturerName</em> est le nom du fabricant.<br/> Il correspond à l'adresse I2C du LCD :
 		<ul>
@@ -171,7 +171,7 @@
 	<td><strong>Description</strong></td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_enum_VS.png"></td>
+	<td><img src="images/Enumerator_16x.png"></td>
 	<td><strong>LcdManufacturer</strong></td>
 	<td>
 		MIDAS : 0x3a (par défaut)
@@ -179,7 +179,7 @@
 	</td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_enum_VS.png"></td>
+	<td><img src="images/Enumerator_16x.png"></td>
 	<td><strong>CursorType</strong></td>
 	<td>
 		<strong><em>Blink</em></strong> : clignotant (par défaut)<br/>
@@ -197,17 +197,17 @@
 	<td><strong>Description</strong></td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_method_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>void ClearScreen</strong>()</td>
 	<td>Efface l'écran (2 x 16 caractères).</td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_method_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>void Init</strong>()</td>
 	<td>Initialise l'afficheur en mode 2 x 16 caractères. A utiliser en premier après la construction de l'objet.</td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_method_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>void LineBegin</strong>(<strong>byte</strong> <em>x</em>)</td>
 	<td>
 	<p>Fixe le début de la ligne.</p>
@@ -215,7 +215,7 @@
 	</td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_method_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>void PutChar</strong>(<strong>byte</strong> <em>x_pos</em>, <strong>byte</strong> <em>y_pos</em>, <strong>byte</strong> <em>z_char</em>)</td>
 	<td>
 		<p>Ecrit un caractère (z_char) aux coordonnées (x_pos, y_pos) de l'afficheur.
@@ -225,7 +225,7 @@
 	</td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_method_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>void PutString</strong>(<strong>byte</strong> <em>x_pos</em>, <strong>byte</strong> <em>y_pos</em>, <strong>string</strong> <em>Text</em>)</td>
 	<td>
 		<p>Ecrit une chaîne de caractères (Text) aux coordonnées (x_pos, y_pos) de l'afficheur.
@@ -235,7 +235,7 @@
 	</td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_method_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>void SelectCursor</strong>(<strong>CursorType</strong> <em>posCursorx</em>)</td>
 	<td>
 	<p>Sélection du curseur</p>
@@ -243,7 +243,7 @@
 	</td>
 </tr>
 <tr>
-	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_method_VS.png"></td>
+	<td><img src="images/Method_16x.png"></td>
 	<td><strong>void SetBacklight</strong>(<strong>byte</strong> <em>bright</em>)</td>
 	<td>
 		<p>Réglage du contraste de l'afficheur</p>
