@@ -1,264 +1,282 @@
 <!DOCTYPE html>
 <html>
 
- <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Contrôler un afficheur LCD 2x16 I2C (PCF2119).">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <title>I2CLcd</title>
- </head>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="Contrôler un afficheur LCD 2x16 I2C (PCF2119).">
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<title>I2CLcd</title>
+</head>
 
-  <body>
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/WebGE/LCDI2C">View on GitHub</a>
-          <h1 id="project_title">Afficheur LCD 2x16 I²C</h1>
-          <h2 id="project_tagline">Description de la classe <strong><em>I2CLcd</em></strong> développée en C# pour une Netduino plus 2 ou une Netduino 3.</h2>
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/WebGE/LCDI2C/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/WebGE/LCDI2C/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+<body>
+	<!-- HEADER -->
+	<div id="header_wrap" class="outer">
+		<header class="inner">
+			<a id="forkme_banner" href="https://github.com/WebGE/LCDI2C">View on GitHub</a>
+			<h1 id="project_title">Afficheur LCD 2x16 I²C</h1>
+			<h2 id="project_tagline">Description de la classe <strong><em>I2CLcd</em></strong> développée en C# pour une Netduino plus 2 ou une Netduino 3.</h2>
+			<section id="downloads">
+				<a class="zip_download_link" href="https://github.com/WebGE/LCDI2C/zipball/master">Download this project as a .zip file</a>
+				<a class="tar_download_link" href="https://github.com/WebGE/LCDI2C/tarball/master">Download this project as a tar.gz file</a>
+			</section>
+		</header>
+	</div>
 
-<!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <hr/><h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Le circuit intégré PCF2119 : LCD controllers/drivers</h3><hr/>
-<ul>
-	<li><strong>Présentation</strong></li>
-	<p>Le PCF2119 est un circuit intégré destiné à la commande des matrices de points 5x8. Il est utilisé par les afficheurs à cristaux liquides (lcd) 2x16 ou 1x32. On y accède via un bus I²C. Un exemple d'afficheur utilisant ce circuit est présenté ci-dessous.</p>
-	<li><strong>MIDAS - MC21605E6W-SPTLYI - LCD 2X16 STN LED B/L Y/VERT I2C I/F</strong></li>
-	<p align="center"><img src="http://fr.farnell.com/productimages/farnell/standard/2342652-40.jpg" /></p>
-	<li><strong>Documentation: </strong><a href="http://www.farnell.com/datasheets/1722538.pdf" target="_blank">pdf</a></li>
-	<li><strong>Distributeur</strong> : <a href="http://fr.farnell.com/midas/mc21605e6w-sptlyi/lcd-2x16-stn-led-b-l-vert-i2c-i/dp/2342652" target="_blank" >Farnell</a></li>
-</ul>
-<hr/>
-<h3>IHM SSI</h3>
-<p>L'<strong>I</strong>nterface <strong>H</strong>omme <strong>M</strong>achine <strong><a href="https://webge.github.io/IHMSSI/" target="_blank">SSI</a></strong> se compose :</p>
-	<ul>
-		<li>d'un afficheur I²C 2x16 (MIDAS ou BATRON) à PCF2119,</li>
-		<li>de huit leds et de huit boutons-poussoir connectés à deux <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a>.</li>
-	</ul>
-<p align="center"><img src="images/IHMSISI.jpg" width="50%" height="50%"></p>
-<hr/>
-<h3>
-<a name="carte-netduino-de-secret-labs" class="anchor" href="#carte-netduino-de-secret-labs" target="_blank"><span class="octicon octicon-link"></span></a>Les cartes NetDuino</h3><h5>Secret Labs</h5>
-<hr/>
-<ul>
-	<li><strong>Microcontrôleur</strong> : STM32F405RG 32 bits à architecture Cortex-M4 cadencé à 168 MHz.</li>
-	<li><strong>RAM</strong> : 100 KB (164+)*.</li>
-	<li><strong>Flash</strong> : 384 KB (1408KB)*.</li>
-	<li><strong>Port Ethernet : </strong> 10Mbps (Wifi:802.11b/g/n)*.</li>
-	<li><strong>E/S numériques</strong> : 22</li>
-	<li><strong>Entrées analogiques</strong> : 6</li>
-	<li><strong>Stockage</strong>: carte µSD</li>
-	<li><strong>IDE</strong> : Microsoft Visual Studio</li>
-	<li><strong>Framework</strong> : .NETMF 4.3</li>
-	<li><strong>Langages de programmation</strong> : C#, VB</li>
-</ul>
+	<!-- MAIN CONTENT -->
+	<div id="main_content_wrap" class="outer">
+		<section id="main_content" class="inner">
+			<hr/>
+			<h3>
+				<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Le
+				circuit intégré PCF2119 : LCD controllers/drivers</h3>
+			<hr/>
+			<ul>
+				<li><strong>Présentation</strong></li>
+				<p>Le PCF2119 est un circuit intégré destiné à la commande des matrices de points 5x8. Il est utilisé par les afficheurs
+					à cristaux liquides (lcd) 2x16 ou 1x32. On y accède via un bus I²C. Un exemple d'afficheur utilisant ce circuit est
+					présenté ci-dessous.</p>
+				<li><strong>MIDAS - MC21605E6W-SPTLYI - LCD 2X16 STN LED B/L Y/VERT I2C I/F</strong></li>
+				<p align="center"><img src="http://fr.farnell.com/productimages/farnell/standard/2342652-40.jpg" /></p>
+				<li><strong>Documentation: </strong><a href="http://www.farnell.com/datasheets/1722538.pdf" target="_blank">pdf</a></li>
+				<li><strong>Distributeur</strong> : <a href="http://fr.farnell.com/midas/mc21605e6w-sptlyi/lcd-2x16-stn-led-b-l-vert-i2c-i/dp/2342652"
+						target="_blank">Farnell</a></li>
+			</ul>
+			<hr/>
+			<h3>IHM SSI</h3>
+			<p>L'<strong>I</strong>nterface <strong>H</strong>omme <strong>M</strong>achine <strong><a href="https://webge.github.io/IHMSSI/" target="_blank">SSI</a></strong>				se compose :</p>
+			<ul>
+				<li>d'un afficheur I²C 2x16 (MIDAS ou BATRON) à PCF2119,</li>
+				<li>de huit leds et de huit boutons-poussoir connectés à deux <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a>.</li>
+			</ul>
+			<p align="center"><img src="images/IHMSISI.jpg" width="50%" height="50%"></p>
+			<hr/>
+			<h3>
+				<a name="carte-netduino-de-secret-labs" class="anchor" href="#carte-netduino-de-secret-labs" target="_blank"><span class="octicon octicon-link"></span></a>Les
+				cartes NetDuino</h3>
+			<h5>Secret Labs</h5>
+			<hr/>
+			<ul>
+				<li><strong>Microcontrôleur</strong> : STM32F405RG 32 bits à architecture Cortex-M4 cadencé à 168 MHz.</li>
+				<li><strong>RAM</strong> : 100 KB (164+)*.</li>
+				<li><strong>Flash</strong> : 384 KB (1408KB)*.</li>
+				<li><strong>Port Ethernet : </strong> 10Mbps (Wifi:802.11b/g/n)*.</li>
+				<li><strong>E/S numériques</strong> : 22</li>
+				<li><strong>Entrées analogiques</strong> : 6</li>
+				<li><strong>Stockage</strong>: carte µSD</li>
+				<li><strong>IDE</strong> : Microsoft Visual Studio</li>
+				<li><strong>Framework</strong> : .NETMF 4.3</li>
+				<li><strong>Langages de programmation</strong> : C#, VB</li>
+			</ul>
 
-<table>
-	<tr>
-		<td><img src="http://www.mouser.com/images/microsites/Netduino_Plus_2.jpg" alt="Netduino plus 2" /></td>
-		<td><img src="http://static.netduino.com/images/netduino3wifi/specs/inputandoutput.jpg" alt="Netduino 3 wifi" /></td>
-	</tr>
-	<tr>
-		<td align="center"><strong>Netduino + 2</strong></td>
-		<td  align="center"><strong>Netduino 3 wifi* (compatible Gadgeteer)</strong></td>
-	</tr>
-</table>
+			<table>
+				<tr>
+					<td><img src="http://www.mouser.com/images/microsites/Netduino_Plus_2.jpg" alt="Netduino plus 2" /></td>
+					<td><img src="http://static.netduino.com/images/netduino3wifi/specs/inputandoutput.jpg" alt="Netduino 3 wifi" /></td>
+				</tr>
+				<tr>
+					<td align="center"><strong>Netduino + 2</strong></td>
+					<td align="center"><strong>Netduino 3 wifi* (compatible Gadgeteer)</strong></td>
+				</tr>
+			</table>
 
-<ul>
-	<li><strong>Sites à consulter</strong> : <a href="http://netduino.com/netduinoplus2/specs.htm" target="_blank">Netduino</a>, <a href="http://www.netmf.com/" target="_blank">NETMF</a></li>
-	<li><strong>Distributeurs</strong> : <a href="http://www.mouser.fr/Search/Refine.aspx?Keyword=netduino" target="_blank">Mouser Electronics</a></li>
-</ul>
-<hr/>
-<h3>Wiki</h3>
-<ul>
-	<li><strong>Exemple pour la carte Netduino sur Wikispaces: <a href="https://csharpembarquenetduino.wikispaces.com/" target="_blank">lien</a></strong></li>
-</ul>
-<hr>
-<h3>Classe I2CLCD</h3>
-<ul>
-	<li><strong>Rôle: </strong>Contrôle un afficheur à PCF2119 via un bus I²C.</li>
-        <li><strong>Espace de noms: </strong>ToolBoxes</li>
-	<li><strong>Assembly: </strong>I2CLCD</li>
-</ul>
-<hr/>
-<p><strong>Contenu du répertoire à télécharger</strong></p>
-<p> Le répertoire à télécharger (au format zip ou tar.gz) contient la solution <strong>NetduinoI2CLCD</strong> composée : </p>
-<ul>
-	<li>Du projet <strong>I2CLCD </strong> : le code de la classe <em>I2CLcd</em>.</li>
-	<li>Du projet <strong>TestI2CLCD </strong>: un exemple d'utilisation de cette classe.</li>
-</ul>
-<hr/>
-<p><strong>Utilisation</strong></p>
-<ol>
-	<li><strong>Ajouter</strong> l'(es) assembly(s) dans le répertoire <em>référence</em> du projet et l'espace de noms <strong>ToolBoxes </strong>dans l'en-tête du fichier source.</li>
-	<li><strong>Créer</strong> un objet en utilisant un des constructeurs <em>I2CLcd</em>.</li>
-	<li><strong>Initialiser</strong> le LCD avec la méthode <em>Init</em>.</li>
-	<li><strong>Effacer l'écran</strong> avec la méthode <em>ClearScreen</em>.</li>
-	<li><strong>Utiliser</strong> les autres méthodes pour gérer l'affichage.</li>
-</ol>
-<hr>
-<p><strong>Constructeurs</strong></p>
-<table>
-<tr>
-	<td></td>
-	<td><strong>Syntaxe</strong></td>
-	<td><strong>Description</strong></td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>I2CLcd</strong>()</td>
-	<td>Instancie un objet "I2CLcd" avec les paramètres : <br/> - Fabricant = Midas <br/> - Fréquence du bus: 100kHz</td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits)</em></td>
-	<td>
-		Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits: </em>adresse I²C sur 7 bits attribuée à l'afficheur. <br/> 
-		<ul>
-			<li><strong>Midas</strong> (0x3a)</li>
-			<li><strong>Batron</strong> (0x3b)</li>
-		</ul>	
-		Fréquence du bus: 100kHz.
-	</td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>)</td>
-	<td>Instancie un objet "I2CLcd". <em>ManufacturerName: </em>nom du fabricant.<br/> Il correspond à l'adresse I²C du LCD :
-		<ul>
-			<li><strong>Midas</strong> (0x3a)</li>
-			<li><strong>Batron</strong> (0x3b)</li>
-		</ul>			
-		Fréquence du bus: 100kHz. 
-	</td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
-	<td>Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits</em> est l'adresse I²C sur 7 bits attribuée à l'afficheur.  <br>
-		<ul>
-			<li><strong>Midas</strong> (0x3a)</li>
-			<li><strong>Batron</strong> (0x3b)</li>
-		</ul>	
-	<em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz]. </td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
-	<td>Instancie un objet "I2CLcd". <em>ManufacturerName</em> est le nom du fabricant.<br/> Il correspond à l'adresse I2C du LCD :
-		<ul>
-			<li><strong>Midas</strong> (0x3a)</li>
-			<li><strong>Batron</strong> (0x3b)</li>
-		</ul>			
-	<em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz]. 
-	</td>
-</tr>
-</table>
+			<ul>
+				<li><strong>Sites à consulter</strong> : <a href="http://netduino.com/netduinoplus2/specs.htm" target="_blank">Netduino</a>,
+					<a href="http://www.netmf.com/" target="_blank">NETMF</a></li>
+				<li><strong>Distributeurs</strong> : <a href="http://www.mouser.fr/Search/Refine.aspx?Keyword=netduino" target="_blank">Mouser Electronics</a></li>
+			</ul>
+			<hr/>
+			<h3>Wiki</h3>
+			<ul>
+				<li><strong>Exemple pour la carte Netduino sur Wikispaces: <a href="https://csharpembarquenetduino.wikispaces.com/" target="_blank">lien</a></strong></li>
+			</ul>
+			<hr>
+			<h3>Contenu du répertoire proposé au téléchargement</h3>
+			<p> Le répertoire proposé au téléchargement (au format zip ou tar.gz) contient la solution <strong>NetduinoI2CLCD</strong> composée :
+			</p>
+			<ul>
+				<li>Du projet <strong>I2CLCD </strong> : le <strong>code source</strong> de la classe <em>I2CLcd</em>.</li>
+				<li>Du projet <strong>TestI2CLCD </strong>: un exemple d'utilisation de cette classe.</li>
+			</ul>
+			<p><em>Remarques : La dernière version <strong>compilée</strong> de la classe <strong>I2CLcd</strong> se situe dans la bibliothèque <strong>MicroToolsKit</strong> disponible sur <a href="https://www.nuget.org/" target="_blank">nuget.org</a>.</em></p>
+			<p align="center"><img src="images/NuGet-large.png" /></p>
+			<p><em>Installer cette bibliothèque dans le projet simplifie l'utilisation de cette classe.</em></p>
+			<hr/>
+			<h3>Description et utilisation de la classe I2CLCD</h3>
+			<ul>
+				<li><strong>Rôle: </strong>Contrôler un afficheur à PCF2119 via un bus I²C.</li>
+				<li><strong>Assembly: </strong> <em>MicroToolsKit</em> (disponible sur <a href="https://www.nuget.org/" target="_blank">nuget.org</a>)</li>
+				<li><strong>Espace de noms: </strong><em>Microtoolskit.Hardware.Displays</em></li>
+			</ul>
+			<hr/>
 
-<p><strong>Enumérations</strong></p>
-<table width="100%">
-<tr>
-	<td></td>
-	<td><strong>Syntaxe</strong></td>
-	<td><strong>Description</strong></td>
-</tr>
-<tr>
-	<td><img src="images/Enumerator_16x.png"></td>
-	<td><strong>LcdManufacturer</strong></td>
-	<td>
-		MIDAS : 0x3a (par défaut)
-		BATRON : 0x3b <br/>
-	</td>
-</tr>
-<tr>
-	<td><img src="images/Enumerator_16x.png"></td>
-	<td><strong>CursorType</strong></td>
-	<td>
-		<strong><em>Blink</em></strong> : clignotant (par défaut)<br/>
-		<strong><em>Hide</em></strong> : caché <br />
-		<strong><em>Underline</em></strong> : soulignement	
-	</td>
-</tr>
-</table>
+			<p><strong>Création d'un projet avec l'IDE Visual Studio</strong></p>
+			<ol>
+				li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>					(disponible sur <a href="https://www.nuget.org/" target="_blank">nuget.org</a>) dans le répertoire <em>Références</em>					du projet.(clic droit sur <em>Références</em> puis <em>Gérer les packages NuGet...</em>)</li>
+				<li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.Displays </strong>dans
+					l'en-tête du fichier source.</li>
+				<li><strong>Créer</strong> un objet en utilisant un des constructeurs <em>I2CLcd</em>.</li>
+				<li><strong>Initialiser</strong> le LCD avec la méthode <em>Init</em>.</li>
+				<li><strong>Effacer l'écran</strong> avec la méthode <em>ClearScreen</em>.</li>
+				<li><strong>Utiliser</strong> les autres méthodes pour gérer l'affichage.</li>
+			</ol>
+			<hr>
+			<p><strong>Constructeurs</strong></p>
+			<table>
+				<tr>
+					<td></td>
+					<td><strong>Syntaxe</strong></td>
+					<td><strong>Description</strong></td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>I2CLcd</strong>()</td>
+					<td>Instancie un objet "I2CLcd" avec les paramètres : <br/> - Fabricant = Midas <br/> - Fréquence du bus: 100kHz</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits)</em></td>
+					<td>
+						Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits: </em>adresse I²C sur 7 bits attribuée à l'afficheur. <br/>
+						<ul>
+							<li><strong>Midas</strong> (0x3a)</li>
+							<li><strong>Batron</strong> (0x3b)</li>
+						</ul>
+						Fréquence du bus: 100kHz.
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>)</td>
+					<td>Instancie un objet "I2CLcd". <em>ManufacturerName: </em>nom du fabricant.<br/> Il correspond à l'adresse I²C du LCD
+						:
+						<ul>
+							<li><strong>Midas</strong> (0x3a)</li>
+							<li><strong>Batron</strong> (0x3b)</li>
+						</ul>
+						Fréquence du bus: 100kHz.
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
+					<td>Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits</em> est l'adresse I²C sur 7 bits attribuée à l'afficheur. <br>
+						<ul>
+							<li><strong>Midas</strong> (0x3a)</li>
+							<li><strong>Batron</strong> (0x3b)</li>
+						</ul>
+						<em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz]. </td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
+					<td>Instancie un objet "I2CLcd". <em>ManufacturerName</em> est le nom du fabricant.<br/> Il correspond à l'adresse I2C du
+						LCD :
+						<ul>
+							<li><strong>Midas</strong> (0x3a)</li>
+							<li><strong>Batron</strong> (0x3b)</li>
+						</ul>
+						<em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz].
+					</td>
+				</tr>
+			</table>
 
-<p><strong>Méthodes</strong></p>
-<table>
-<tr>
-	<td></td>
-	<td><strong>Syntaxe</strong></td>
-	<td><strong>Description</strong></td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>void ClearScreen</strong>()</td>
-	<td>Efface l'écran (2 x 16 caractères).</td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>void Init</strong>()</td>
-	<td>Initialise l'afficheur en mode 2 x 16 caractères. A utiliser en premier après la construction de l'objet.</td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>void LineBegin</strong>(<strong>byte</strong> <em>x</em>)</td>
-	<td>
-	<p>Fixe le début de la ligne.</p>
-	<p><em>x</em>: position en x sur l'afficheur (0..15).</p>
-	</td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>void PutChar</strong>(<strong>byte</strong> <em>x_pos</em>, <strong>byte</strong> <em>y_pos</em>, <strong>byte</strong> <em>z_char</em>)</td>
-	<td>
-		<p>Ecrit un caractère (z_char) aux coordonnées (x_pos, y_pos) de l'afficheur.
-		<p><em>x_pos</em>: position en x sur l'afficheur (0..15).</p>
-		<p><em>y_pos</em>: position en y sur l'afficheur (0..1).</p>
-		<p><em>z_char</em>: caractère à afficher.</p>
-	</td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>void PutString</strong>(<strong>byte</strong> <em>x_pos</em>, <strong>byte</strong> <em>y_pos</em>, <strong>string</strong> <em>Text</em>)</td>
-	<td>
-		<p>Ecrit une chaîne de caractères (Text) aux coordonnées (x_pos, y_pos) de l'afficheur.
-		<p><em>x_pos</em>: position en x sur l'afficheur (0..15).</p>
-		<p><em>y_pos</em>: position en y sur l'afficheur (0..1).</p>
-		<p><em>Text</em>: Chaîne à afficher.</p>
-	</td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>void SelectCursor</strong>(<strong>CursorType</strong> <em>posCursorx</em>)</td>
-	<td>
-	<p>Sélection du curseur</p>
-	<p><em>CursorType</em>: Hide, Underline, Blink</p>
-	</td>
-</tr>
-<tr>
-	<td><img src="images/Method_16x.png"></td>
-	<td><strong>void SetBacklight</strong>(<strong>byte</strong> <em>bright</em>)</td>
-	<td>
-		<p>Réglage du contraste de l'afficheur</p>
-		<p><em>bright</em>: 20 dark -> 0 light</p>
-	</td>
-</tr>
-</table>
-      </section>
-</div>
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Contrôler un afficheur LCD 2x16 I2C (PCF2119) by <a href="https://github.com/WebGE">WebGE</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-  </body>
+			<p><strong>Enumérations</strong></p>
+			<table width="100%">
+				<tr>
+					<td></td>
+					<td><strong>Syntaxe</strong></td>
+					<td><strong>Description</strong></td>
+				</tr>
+				<tr>
+					<td><img src="images/Enumerator_16x.png"></td>
+					<td><strong>LcdManufacturer</strong></td>
+					<td>
+						MIDAS : 0x3a (par défaut) BATRON : 0x3b <br/>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Enumerator_16x.png"></td>
+					<td><strong>CursorType</strong></td>
+					<td>
+						<strong><em>Blink</em></strong> : clignotant (par défaut)<br/>
+						<strong><em>Hide</em></strong> : caché <br />
+						<strong><em>Underline</em></strong> : soulignement
+					</td>
+				</tr>
+			</table>
+
+			<p><strong>Méthodes</strong></p>
+			<table>
+				<tr>
+					<td></td>
+					<td><strong>Syntaxe</strong></td>
+					<td><strong>Description</strong></td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void ClearScreen</strong>()</td>
+					<td>Efface l'écran (2 x 16 caractères).</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void Init</strong>()</td>
+					<td>Initialise l'afficheur en mode 2 x 16 caractères. A utiliser en premier après la construction de l'objet.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void LineBegin</strong>(<strong>byte</strong> <em>x</em>)</td>
+					<td>
+						<p>Fixe le début de la ligne.</p>
+						<p><em>x</em>: position en x sur l'afficheur (0..15).</p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void PutChar</strong>(<strong>byte</strong> <em>x_pos</em>, <strong>byte</strong> <em>y_pos</em>, <strong>byte</strong>						<em>z_char</em>)</td>
+					<td>
+						<p>Ecrit un caractère (z_char) aux coordonnées (x_pos, y_pos) de l'afficheur.
+							<p><em>x_pos</em>: position en x sur l'afficheur (0..15).</p>
+							<p><em>y_pos</em>: position en y sur l'afficheur (0..1).</p>
+							<p><em>z_char</em>: caractère à afficher.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void PutString</strong>(<strong>byte</strong> <em>x_pos</em>, <strong>byte</strong> <em>y_pos</em>, <strong>string</strong>						<em>Text</em>)</td>
+					<td>
+						<p>Ecrit une chaîne de caractères (Text) aux coordonnées (x_pos, y_pos) de l'afficheur.
+							<p><em>x_pos</em>: position en x sur l'afficheur (0..15).</p>
+							<p><em>y_pos</em>: position en y sur l'afficheur (0..1).</p>
+							<p><em>Text</em>: Chaîne à afficher.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void SelectCursor</strong>(<strong>CursorType</strong> <em>posCursorx</em>)</td>
+					<td>
+						<p>Sélection du curseur</p>
+						<p><em>CursorType</em>: Hide, Underline, Blink</p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void SetBacklight</strong>(<strong>byte</strong> <em>bright</em>)</td>
+					<td>
+						<p>Réglage du contraste de l'afficheur</p>
+						<p><em>bright</em>: 20 dark -> 0 light</p>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</div>
+	<!-- FOOTER  -->
+	<div id="footer_wrap" class="outer">
+		<footer class="inner">
+			<p class="copyright">Contrôler un afficheur LCD 2x16 I2C (PCF2119) by <a href="https://github.com/WebGE">WebGE</a></p>
+			<p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+		</footer>
+	</div>
+</body>
+
 </html>
