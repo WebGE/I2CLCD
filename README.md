@@ -1,7 +1,7 @@
 I2CLCD
 ======
 
-Source code of the I2CLcd NETMF class contained in the <a href="https://www.nuget.org/packages/WEBGE.Microtoolskit/" target="_blank">MicroToolsKit</a> library. Download at <a href="https://www.nuget.org" target="_blank">nuget.com</a>
+Source code of the I2CLcd <strong>NETMF class</strong> contained in the <a href="https://www.nuget.org/packages/WEBGE.Microtoolskit/" target="_blank">MicroToolsKit</a> <strong>library</strong>. Download at <a href="https://www.nuget.org" target="_blank">nuget.com</a>
 
 This class is for a PCF2119 circuit : <strong>LCD controllers/drivers</strong>.
 
@@ -16,7 +16,7 @@ This class is for a PCF2119 circuit : <strong>LCD controllers/drivers</strong>.
 
 <strong>Framework</strong> : .NETMF 4.3
 
-
+<hr>
 See <a href="http://webge.github.io/I2CLCD/" target="_blank">I2CLcd GitHub Pages</a> too get started.
 
 Maintened by <a href="mailto:philippemariano@gmail.com">Philippe Mariano</a>
