@@ -1,7 +1,7 @@
 LCDI2C
 =========
 
-Tags: I²C, LCD 2x16,BATRON, MIDAS, I2C, PCF2119, Netduino, FEZ, PANDA, COBRA, C#, Visual Studio.
+Tags: I²C, LCD 2x16,BATRON, MIDAS, I2C, PCF2119, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
 
 Target: Netduino, Netduino plus 2, Netduino 3, FEZ PANDA 3 et COBRA 3.
 
