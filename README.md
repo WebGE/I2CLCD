@@ -19,5 +19,5 @@ This class is for a PCF2119 circuit : <strong>LCD controllers/drivers</strong>.
 <hr>
 See <a href="http://webge.github.io/I2CLCD/" target="_blank">I2CLcd GitHub Pages</a> too get started.
 
-Maintened by <a href="mailto:philippemariano@gmail.com">Philippe Mariano</a>
+Maintened by <a href="mailto:philippemariano@gmail.com">WebGE</a>
 
