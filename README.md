@@ -1,0 +1,2 @@
+# I2CLCD
+A NETMF library for LCD 2x16 I2C (PCF2119)
