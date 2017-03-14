@@ -42,7 +42,7 @@ I²C Bus, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
 
 <strong>To get started</strong>
 --------------------
-See <a href="http://webge.github.io/I2CLCD/" target="_blank">I2CLcd GitHub Pages</a> too get started.
+See <a href="http://webge.github.io/I2CLCD/" target="_blank">I2CLcd GitHub Pages.</a>
 
 Maintened by <a href="mailto:philippemariano@gmail.com">WebGE</a>
 
