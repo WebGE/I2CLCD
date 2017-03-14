@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I2CLCD", "I2CLCD\I2CLCD.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netduino", "Netduino\Netduino.csproj", "{B8E3CD80-6BD8-4A68-9E8A-02214D753A0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FezPanda", "FezPanda\FezPanda.csproj", "{B26FCE48-D71C-4A90-87AF-19CCEDBB568C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,12 @@ Global
 		{B8E3CD80-6BD8-4A68-9E8A-02214D753A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8E3CD80-6BD8-4A68-9E8A-02214D753A0D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8E3CD80-6BD8-4A68-9E8A-02214D753A0D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B26FCE48-D71C-4A90-87AF-19CCEDBB568C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B26FCE48-D71C-4A90-87AF-19CCEDBB568C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B26FCE48-D71C-4A90-87AF-19CCEDBB568C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B26FCE48-D71C-4A90-87AF-19CCEDBB568C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B26FCE48-D71C-4A90-87AF-19CCEDBB568C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B26FCE48-D71C-4A90-87AF-19CCEDBB568C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
