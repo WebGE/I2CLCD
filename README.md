@@ -1,22 +1,47 @@
-I2CLCD
-======
+# I2CLCD .NetMF Class
 
-Source code of the I2CLcd <strong>NETMF class</strong> contained in the <a href="https://www.nuget.org/packages/WEBGE.Microtoolskit/" target="_blank">MicroToolsKit</a> <strong>library</strong>. Download at <a href="https://www.nuget.org" target="_blank">nuget.com</a>
+<strong>Description</strong>
+-------------------------------------
+Source code.
 
-This class is for a PCF2119 circuit : <strong>LCD controllers/drivers</strong>.
+A <strong>.NETMF 4.3 class</strong> write for a PCF2179 circuit : <strong>LCD controllers/drivers</strong>. 
 
+This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoolskit/" target="_blank">MicroToolsKit</a> <strong>library</strong>. Download at <a href="https://www.nuget.org" target="_blank">nuget.com</a>
 
-<strong>Tags</strong>: I²C Bus, LCD 2x16,BATRON, MIDAS, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
+ <img src="img/nuget.JPG" align="center" />
 
-<strong>Target</strong>: Netduino, Netduino plus 2, Netduino 3, FEZ PANDA 3 et COBRA 3.
+<strong>Hardware</strong>
+---------------------
+<strong> Targets </strong>: Netduino, Netduino plus 2, Netduino 3, FEZ PANDA 3 et COBRA 3.
 
-<strong>IDE</strong> : Visual Studio Community.
+<strong>Software</strong>
+---------------------
+<ul>
+<li><strong>Language</strong> : C#</li>
+<li><strong>Framework used</strong> : .NETMF 4.3</li>
+<li><strong>IDE</strong> : Visual Studio Community 2015</li>
+<li><strong>xml</strong> : documentation inside class </li> 
+</ul>
 
-<strong>Language</strong> : C#.
+<strong> Visual Studio solution</strong>
+-------------------------------------
+<ul>
+<li><strong>I2CLCD</strong>
+<ul>
+<li><strong>I2CLCD</strong> : .NetMF class</li>
+<img src="img/I2CLCDClass.png" />
+<li><strong>Netduino</strong> : class test program for Netduino board</li>
+<li><strong>FezPanda</strong> : class test program for Fez Panda board</li>
+</ul>
+</li>
+</ul>
 
-<strong>Framework</strong> : .NETMF 4.3
+<strong>Keywords</strong>
+----------------------------
+I²C Bus, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
 
-<hr>
+<strong>To get started</strong>
+--------------------
 See <a href="http://webge.github.io/I2CLCD/" target="_blank">I2CLcd GitHub Pages</a> too get started.
 
 Maintened by <a href="mailto:philippemariano@gmail.com">WebGE</a>
