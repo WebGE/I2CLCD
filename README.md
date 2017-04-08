@@ -36,6 +36,14 @@ This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoo
 </li>
 </ul>
 
+<strong>Assembly</strong>
+--------------------------
+To come up
+
+<strong>Video to see on youtube</strong>
+-------------------
+To come up
+
 <strong>Keywords</strong>
 ----------------------------
 I²C Bus, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
@@ -48,5 +56,9 @@ Fez Panda III, Netduino plus 2
 --------------------
 See <a href="http://webge.github.io/I2CLCD/" target="_blank">I2CLcd GitHub Pages.</a>
 
-Maintened by <a href="mailto:philippemariano@gmail.com">WebGE</a>
+<strong>Project site</strong>
+--------------------
+<a href ="https://csharpembarquenetduino.wikispaces.com/6.+MicroToolsKit+library">MicroToolsKit library</a>
+<hr>
+<strong>aintened by</strong> <a href="mailto:philippemariano@gmail.com">WebGE</a>
 
