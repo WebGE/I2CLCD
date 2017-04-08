@@ -1,4 +1,4 @@
-# I2CLCD .NetMF Class
+# I2CLCD
 
 <strong>Description</strong>
 -------------------------------------
