@@ -60,5 +60,5 @@ See <a href="http://webge.github.io/I2CLCD/" target="_blank">I2CLcd GitHub Pages
 --------------------
 <a href ="https://csharpembarquenetduino.wikispaces.com/6.+MicroToolsKit+library">MicroToolsKit library</a>
 <hr>
-<strong>aintened by</strong> <a href="mailto:philippemariano@gmail.com">WebGE</a>
+<strong>Maintened by</strong> <a href="mailto:philippemariano@gmail.com">WebGE</a>
 
