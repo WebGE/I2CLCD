@@ -48,8 +48,10 @@
 				</li>
 				<li>LES FASCICULES
 					<ol>
-						<li><a href="https://csharpembarquenetduino.wikispaces.com/5a.+Les+fascicules+d%27exemples++cod%C3%A9s+en+CSharp+pour+la+carte+Netduino" target="_blank">Exemples de code pour les cartes Netduino</a></li>
-						<li><a href="https://csharpembarquenetduino.wikispaces.com/5b.+Le+fascicule+d%27exemples++cod%C3%A9s+en+CSharp+pour+les+cartes+Fez+%28PANDA+3%2C+etc%29" target="_blank">Exemples de code pour les cartes FEZ</a> </li>
+						<li><a href="https://csharpembarquenetduino.wikispaces.com/5a.+Les+fascicules+d%27exemples++cod%C3%A9s+en+CSharp+pour+la+carte+Netduino"
+							 target="_blank">Exemples de code pour les cartes Netduino</a></li>
+						<li><a href="https://csharpembarquenetduino.wikispaces.com/5b.+Le+fascicule+d%27exemples++cod%C3%A9s+en+CSharp+pour+les+cartes+Fez+%28PANDA+3%2C+etc%29"
+							 target="_blank">Exemples de code pour les cartes FEZ</a> </li>
 					</ol>
 				</li>
 				<li><a href="https://csharpembarquenetduino.wikispaces.com/6.+MicroToolsKit+library" target="_blank">La page du projet MicroToolsKit</a></li>
@@ -68,8 +70,7 @@
 				<p align="center"><img src="http://fr.farnell.com/productimages/farnell/standard/2342652-40.jpg" /></p>
 				<li><strong>Documentation: </strong><a href="http://www.farnell.com/datasheets/1722538.pdf" target="_blank">pdf</a></li>
 				<li><strong>Distributeur</strong> :
-					<a href="http://fr.farnell.com/midas/mc21605e6w-sptlyi/lcd-2x16-stn-led-b-l-vert-i2c-i/dp/2342652"
-						target="_blank">Farnell</a>
+					<a href="http://fr.farnell.com/midas/mc21605e6w-sptlyi/lcd-2x16-stn-led-b-l-vert-i2c-i/dp/2342652" target="_blank">Farnell</a>
 				</li>
 			</ul>
 			<hr>
@@ -168,8 +169,7 @@
 			</p>
 			<p align="center"><img src="images/NuGet-large.png" /></p>
 			<p><strong>Organisation des classes</strong> contenues dans MicroToolsKit
-				<a href="https://csharpembarquenetduino.wikispaces.com/6.+La+biblioth%C3%A8que+MicroToolsKit"
-					target="_blank">[lien]</a>
+				<a href="https://csharpembarquenetduino.wikispaces.com/6.+La+biblioth%C3%A8que+MicroToolsKit" target="_blank">[lien]</a>
 			</p>
 			<p><em>Installer cette bibliothèque dans le projet simplifie l'utilisation de cette classe.</em></p>
 			<hr>
@@ -177,12 +177,10 @@
 			<h4 id="WIKI">2.3 Les Wikis</h4>
 			<ul>
 				<li><strong>Fascicules</strong> d'exemples de code pour les cartes <strong>Netduino</strong>.
-					<a href="https://csharpembarquenetduino.wikispaces.com/5.+Les+fascicules+d%27exemples+cod%C3%A9s+en+CSharp"
-						target="_blank">[lien]</a>
+					<a href="https://csharpembarquenetduino.wikispaces.com/5.+Les+fascicules+d%27exemples+cod%C3%A9s+en+CSharp" target="_blank">[lien]</a>
 				</li>
 				<li><strong>Fascicule</strong> d'exemples de code pour les cartes <strong>FEZ</strong>.
-					<a href="https://csharpembarquefez.wikispaces.com/5.+Les+fascicules+d%27exemples+cod%C3%A9s+en+CSharp"
-						target="_blank">[lien]</a>
+					<a href="https://csharpembarquefez.wikispaces.com/5.+Les+fascicules+d%27exemples+cod%C3%A9s+en+CSharp" target="_blank">[lien]</a>
 				</li>
 			</ul>
 			<hr>
@@ -191,8 +189,7 @@
 			<ul>
 				<li><strong>Rôle: </strong>Contrôler un afficheur à PCF2119 via un bus I²C.</li>
 				<li><strong>Assembly: </strong> <em>MicroToolsKit</em> (disponible sur
-					<a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/"
-						target="_blank">nuget.org</a>)</li>
+					<a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>)</li>
 				<li><strong>Espace de noms: </strong><em>Microtoolskit.Hardware.Displays</em></li>
 			</ul>
 			<hr>
@@ -202,7 +199,8 @@
 				<li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>					(disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans le
 					répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> puis <em>Gérer les packages NuGet...</em>)</li>
 				<li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.Displays </strong>dans l'en-tête du fichier
-					source.</li>
+					source.
+				</li>
 				<li><strong>Créer</strong> un objet en utilisant un des constructeurs <em>I2CLcd</em>.</li>
 				<li><strong>Initialiser</strong> le LCD avec la méthode <em>Init</em>.</li>
 				<li><strong>Effacer l'écran</strong> avec la méthode <em>ClearScreen</em>.</li>
@@ -296,6 +294,9 @@ namespace FezPanda
 							<li><strong>Batron</strong> (0x3b)</li>
 						</ul>
 						<em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz]. </td>
+					<br><br>
+					<strong>Exemple</strong><br>
+					<em>I2CLcd lcd = new I2CLcd(I2CLcd.LcdManufacturer.BATRON, Freq);</em>
 				</tr>
 				<tr>
 					<td><img src="images/Method_16x.png"></td>
@@ -369,6 +370,9 @@ namespace FezPanda
 							<p><em>x_pos</em>: position en x sur l'afficheur (0..15).</p>
 							<p><em>y_pos</em>: position en y sur l'afficheur (0..1).</p>
 							<p><em>z_char</em>: caractère à afficher.</p>
+							<br><br>
+							<strong>Exemple</strong><br>
+							<em>lcd.PutChar(14, 0, 0x11); </em>
 					</td>
 				</tr>
 				<tr>
@@ -379,6 +383,8 @@ namespace FezPanda
 							<p><em>x_pos</em>: position en x sur l'afficheur (0..15).</p>
 							<p><em>y_pos</em>: position en y sur l'afficheur (0..1).</p>
 							<p><em>Text</em>: Chaîne à afficher.</p>
+							<strong>Exemple</strong><br>
+							<em> lcd.PutString(2, 0, "Hello");</em>
 					</td>
 				</tr>
 				<tr>
