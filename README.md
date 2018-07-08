@@ -58,11 +58,11 @@ See <a href="http://webge.github.io/I2CLCD/" target="_blank">I2CLcd GitHub Pages
 
 <strong>Wiki</strong>
 --------------------
-See <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">C# embarqué et .NetMF v4.3 pour les cartes Netduino et GHI FEZ</a> (in French).
+- <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">C# Embarqué et .NetMF v4.3 pour les cartes Netduino et GHI FEZ</a> (in French).
 
 <strong>Project site</strong>
 --------------------
-<a href ="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit</a> (in English).
+- <a href ="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit" target="_blank">MicroToolsKit library</a> (in English).
 <hr>
 <strong>Maintened by</strong> <a href="mailto:philippemariano@gmail.com">WebGE</a>
 
