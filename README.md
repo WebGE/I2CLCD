@@ -58,7 +58,7 @@ See <a href="http://webge.github.io/I2CLCD/" target="_blank">I2CLcd GitHub Pages
 
 <strong>Wiki</strong>
 --------------------
-See <a href="https://csharpembarquenetduino.wikispaces.com/Home" target="_blank">Netduino et FEZ</a> (in French).
+See <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">C# embarqué et .NetMF v4.3 pour les cartes Netduino et GHI FEZ</a> (in French).
 
 <strong>Project site</strong>
 --------------------
