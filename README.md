@@ -52,6 +52,10 @@ I²C Bus, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
 -------------------
 Fez Panda III, Netduino plus 2
 
+<strong>Todo list</strong>
+-------------------
+any
+
 <strong>To get started</strong>
 --------------------
 See <a href="http://webge.github.io/I2CLCD/" target="_blank">I2CLcd GitHub Pages</a> (in French).
