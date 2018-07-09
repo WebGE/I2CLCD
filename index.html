@@ -15,8 +15,10 @@
 		<header class="inner">
 			<a id="forkme_banner" href="https://github.com/WebGE/LCDI2C">View on GitHub</a>
 			<h1 id="project_title">Afficheur LCD 2x16 I²C</h1>
-			<h2 id="project_tagline">Description de la classe <strong><em>I2CLcd</em></strong> développée en C# sous .NETMF 4.3 pour les cartes Netduino et
-				FEZ (PANDA, COBRA...)</h2>
+			<h2 id="project_tagline">Description de la classe
+				<strong>
+					<em>I2CLcd</em>
+				</strong> développée en C# sous .NETMF 4.3 pour les cartes Netduino et FEZ (PANDA, COBRA...)</h2>
 			<section id="downloads">
 				<a class="zip_download_link" href="https://github.com/WebGE/LCDI2C/zipball/master">Download this project as a .zip file</a>
 				<a class="tar_download_link" href="https://github.com/WebGE/LCDI2C/tarball/master">Download this project as a tar.gz file</a>
@@ -33,28 +35,44 @@
 				<li>LE MATERIEL
 					<ol>
 						<li>Le circuit intégré PCF2119 : LCD controllers/drivers</li>
-						<li><a href="#SSI">Exemple d'utilisation du circuit PCF2119 : l'IHM SSI</a></li>
-						<li><a href="#DUINO">Les cartes Netduino</a></li>
-						<li><a href="#FEZ">Les cartes FEZ</a> </li>
+						<li>
+							<a href="#SSI">Exemple d'utilisation du circuit PCF2119 : l'IHM SSI</a>
+						</li>
+						<li>
+							<a href="#DUINO">Les cartes Netduino</a>
+						</li>
+						<li>
+							<a href="#FEZ">Les cartes FEZ</a>
+						</li>
 					</ol>
 				</li>
-				<li><a href="#LOG">LE LOGICIEL</a>
+				<li>
+					<a href="#LOG">LE LOGICIEL</a>
 					<ol>
-						<li><a href="#REP">Contenu du répertoire proposé au téléchargement</a></li>
-						<li><a href="#NUGET">Le NuGet MicroToolsKit</a></li>
-						<li><a href="#WIKI">Le wiki .NetMF v4.3</a></li>
-						<li><a href="#DESC">Description et utilisation de la classe I2CLcd</a></li>
+						<li>
+							<a href="#REP">Contenu du répertoire proposé au téléchargement</a>
+						</li>
+						<li>
+							<a href="#NUGET">Le NuGet MicroToolsKit</a>
+						</li>
+						<li>
+							<a href="#WIKI">Le wiki .NetMF v4.3</a>
+						</li>
+						<li>
+							<a href="#DESC">Description et utilisation de la classe I2CLcd</a>
+						</li>
 					</ol>
 				</li>
 				<li>LES FASCICULES
 					<ol>
-						<li><a href="https://csharpembarquenetduino.wikispaces.com/5a.+Les+fascicules+d%27exemples++cod%C3%A9s+en+CSharp+pour+la+carte+Netduino"
-							 target="_blank">Exemples de code pour les cartes Netduino</a></li>
-						<li><a href="https://csharpembarquenetduino.wikispaces.com/5b.+Le+fascicule+d%27exemples++cod%C3%A9s+en+CSharp+pour+les+cartes+Fez+%28PANDA+3%2C+etc%29"
-							 target="_blank">Exemples de code pour les cartes FEZ</a> </li>
+						<li>
+							<a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">Exemples codés en C# pour les cartes Netduino et Fez (Panda 3, BrainPad)</a>
+						</li>
 					</ol>
 				</li>
-				<li><a href="https://csharpembarquenetduino.wikispaces.com/6.+MicroToolsKit+library" target="_blank">La page du projet MicroToolsKit</a></li>
+				<li>
+					<a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit" target="_blank">La page du projet MicroToolsKit</a>
+				</li>
 			</ol>
 			<hr>
 			<h3>1. LE MATERIEL</h3>
@@ -62,57 +80,101 @@
 			<h4>1.1 Le circuit intégré PCF2119 : LCD controllers/drivers</h4>
 			<hr>
 			<ul>
-				<li><strong>Présentation</strong></li>
+				<li>
+					<strong>Présentation</strong>
+				</li>
 				<p>Le PCF2119 est un circuit intégré destiné à la commande des matrices de points 5x8. Il est utilisé par les afficheurs
 					à cristaux liquides (lcd) 2x16 ou 1x32. On y accède via un bus I²C. Un exemple d'afficheur utilisant ce circuit est
 					présenté ci-dessous.</p>
-				<li><strong>MIDAS - MC21605E6W-SPTLYI - LCD 2X16 STN LED B/L Y/VERT I2C I/F</strong></li>
-				<p align="center"><img src="http://fr.farnell.com/productimages/farnell/standard/2342652-40.jpg" /></p>
-				<li><strong>Documentation: </strong><a href="http://www.farnell.com/datasheets/1722538.pdf" target="_blank">pdf</a></li>
-				<li><strong>Distributeur</strong> :
+				<li>
+					<strong>MIDAS - MC21605E6W-SPTLYI - LCD 2X16 STN LED B/L Y/VERT I2C I/F</strong>
+				</li>
+				<p align="center">
+					<img src="http://fr.farnell.com/productimages/farnell/standard/2342652-40.jpg" />
+				</p>
+				<li>
+					<strong>Documentation: </strong>
+					<a href="http://www.farnell.com/datasheets/1722538.pdf" target="_blank">pdf</a>
+				</li>
+				<li>
+					<strong>Distributeur</strong> :
 					<a href="http://fr.farnell.com/midas/mc21605e6w-sptlyi/lcd-2x16-stn-led-b-l-vert-i2c-i/dp/2342652" target="_blank">Farnell</a>
 				</li>
 			</ul>
 			<hr>
 
 			<h4 id="SSI">1.2 Exemple d'utilisation du circuit PCF2119 : l'IHM SSI</h4>
-			<p>L'<strong>I</strong>nterface <strong>H</strong>omme <strong>M</strong>achine <strong><a href="https://webge.github.io/IHMSSI/" target="_blank">SSI</a></strong>				se compose :</p>
+			<p>L'
+				<strong>I</strong>nterface
+				<strong>H</strong>omme
+				<strong>M</strong>achine
+				<strong>
+					<a href="https://webge.github.io/IHMSSI/" target="_blank">SSI</a>
+				</strong> se compose :</p>
 			<ul>
 				<li>d'un afficheur I²C 2x16 (MIDAS ou BATRON) à PCF2119,</li>
-				<li>de huit leds et de huit boutons-poussoir connectés à deux <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a>.</li>
+				<li>de huit leds et de huit boutons-poussoir connectés à deux
+					<a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a>.</li>
 			</ul>
-			<p align="center"><img src="images/IHMSISI.jpg" width="50%" height="50%"></p>
+			<p align="center">
+				<img src="images/IHMSISI.jpg" width="50%" height="50%">
+			</p>
 			<hr>
 
 			<h4 id="DUINO">1.3 Les cartes Netduino</h4>
 			<h5>Secret Labs</h5>
 			<hr>
 			<ul>
-				<li><strong>Microcontrôleur</strong> : STM32F405RG 32 bits à architecture Cortex-M4 cadencé à 168 MHz.</li>
-				<li><strong>RAM</strong> : 164KB+.</li>
-				<li><strong>Flash</strong> : 1408KB.</li>
-				<li><strong>Port Ethernet : </strong> 10/100Mbps (Wifi:802.11b/g/n)*.</li>
-				<li><strong>E/S numériques</strong> : 22</li>
-				<li><strong>Entrées analogiques</strong> : 6</li>
-				<li><strong>Stockage</strong>: carte µSD</li>
-				<li><strong>IDE</strong> : Microsoft Visual Studio</li>
-				<li><strong>Framework</strong> : .NETMF 4.3</li>
-				<li><strong>Langages de programmation</strong> : C#, VB</li>
-				<li><strong>Compatibilité</strong> : shield Arduino, Gadgeteer</li>
+				<li>
+					<strong>Microcontrôleur</strong> : STM32F405RG 32 bits à architecture Cortex-M4 cadencé à 168 MHz.</li>
+				<li>
+					<strong>RAM</strong> : 164KB+.</li>
+				<li>
+					<strong>Flash</strong> : 1408KB.</li>
+				<li>
+					<strong>Port Ethernet : </strong> 10/100Mbps (Wifi:802.11b/g/n)*.</li>
+				<li>
+					<strong>E/S numériques</strong> : 22</li>
+				<li>
+					<strong>Entrées analogiques</strong> : 6</li>
+				<li>
+					<strong>Stockage</strong>: carte µSD</li>
+				<li>
+					<strong>IDE</strong> : Microsoft Visual Studio</li>
+				<li>
+					<strong>Framework</strong> : .NETMF 4.3</li>
+				<li>
+					<strong>Langages de programmation</strong> : C#, VB</li>
+				<li>
+					<strong>Compatibilité</strong> : shield Arduino, Gadgeteer</li>
 			</ul>
 			<table>
 				<tr>
-					<td><img src="images/netduino3ethernet.png" alt="Netduino plus 2" target="_blank" /></td>
-					<td><img src="images/inputandoutput.png" alt="Netduino 3 wifi" target="_blank" /></td>
+					<td>
+						<img src="images/netduino3ethernet.png" alt="Netduino plus 2" target="_blank" />
+					</td>
+					<td>
+						<img src="images/inputandoutput.png" alt="Netduino 3 wifi" target="_blank" />
+					</td>
 				</tr>
 				<tr>
-					<td align="center"><strong>Netduino 3 Ethernet</strong></td>
-					<td align="center"><strong>Netduino 3 wifi*</strong></td>
+					<td align="center">
+						<strong>Netduino 3 Ethernet</strong>
+					</td>
+					<td align="center">
+						<strong>Netduino 3 wifi*</strong>
+					</td>
 				</tr>
 			</table>
 			<ul>
-				<li><strong>Sites à consulter</strong> : <a href="http://netduino.com/netduinoplus2/specs.htm" target="_blank">Netduino</a></li>
-				<li><strong>Distributeurs</strong> : <a href="http://www.mouser.fr/Search/Refine.aspx?Keyword=netduino" target="_blank">Mouser Electronics</a></li>
+				<li>
+					<strong>Sites à consulter</strong> :
+					<a href="https://www.wildernesslabs.co/" target="_blank">Netduino</a>
+				</li>
+				<li>
+					<strong>Distributeurs</strong> :
+					<a href="http://www.mouser.fr/Search/Refine.aspx?Keyword=netduino" target="_blank">Mouser Electronics</a>
+				</li>
 			</ul>
 			<hr>
 
@@ -120,62 +182,109 @@
 			<h5>GHI Electonics (Extrait)</h5>
 			<hr>
 			<ul>
-				<li><strong>Microcontrôleur</strong> : 180 MHz 32-bit ARM Cortex-M4.(120 MHz 32-bit ARM Cortex-M3 )*</li>
-				<li><strong>SoC(SoM)*</strong> : <a href="https://www.ghielectronics.com/catalog/product/501" target="_blank">G80</a>
-					<a href="https://www.ghielectronics.com/catalog/product/373" target="_blank">G120*</a>
+				<li>
+					<strong>Microcontrôleur</strong> : 180 MHz 32-bit ARM Cortex-M4.(120 MHz 32-bit ARM Cortex-M3 )*</li>
+				<li>
+					<strong>SoC(SoM)*</strong> :
+					<a href="https://www.ghielectronics.com/products/scm/g80" target="_blank">G80</a>
+					<a href="https://www.ghielectronics.com/products/scm/g120e" target="_blank">G120*</a>
 				</li>
-				<li><strong>RAM</strong> : 156 KB(2.87 MB)*.</li>
-				<li><strong>Flash</strong> : 256 KB (13.67 MB)*.</li>
-				<li><strong>E/S numériques</strong> : 53(60)*</li>
-				<li><strong>Entrées analogiques</strong> : 16(8)*</li>
-				<li><strong>Réseaux : </strong> Ethernet TCP/IP, WiFi, and SSL.</li>
-				<li><strong>Stockage</strong>: carte µSD</li>
-				<li><strong>IDE</strong> : Microsoft Visual Studio</li>
-				<li><strong>Framework</strong> : .NETMF 4.3</li>
-				<li><strong>Langages de programmation</strong> : C#, VB</li>
+
+				<li>
+					<strong>RAM</strong> : 156 KB(2.87 MB)*.</li>
+				<li>
+					<strong>Flash</strong> : 256 KB (13.67 MB)*.</li>
+				<li>
+					<strong>E/S numériques</strong> : 53(60)*</li>
+				<li>
+					<strong>Entrées analogiques</strong> : 16(8)*</li>
+				<li>
+					<strong>Réseaux : </strong> Ethernet TCP/IP, WiFi, and SSL.</li>
+				<li>
+					<strong>Stockage</strong>: carte µSD</li>
+				<li>
+					<strong>IDE</strong> : Microsoft Visual Studio</li>
+				<li>
+					<strong>Framework</strong> : .NETMF 4.3</li>
+				<li>
+					<strong>Langages de programmation</strong> : C#, VB</li>
 			</ul>
 
 			<table>
 				<tr>
-					<td><img src="images/panda3.png" alt="PANDA III" /></td>
-					<td><img src="images/cobra3.png" alt="COBRA III" /></td>
+					<td>
+						<img src="images/panda3.png" alt="PANDA III" />
+					</td>
+					<td>
+						<img src="images/cobra3.png" alt="COBRA III" />
+					</td>
 				</tr>
 				<tr>
-					<td align="center"><strong>PANDA III</strong></td>
-					<td align="center"><strong>COBRA III* (compatible Gadgeteer)</strong></td>
+					<td align="center">
+						<strong>PANDA III</strong>
+					</td>
+					<td align="center">
+						<strong>COBRA III* (compatible Gadgeteer)</strong>
+					</td>
 				</tr>
 			</table>
 
 			<ul>
-				<li><strong>Sites à consulter</strong> : <a href="https://www.ghielectronics.com/" target="_blank">GHI ELECTRONICS</a></li>
-				<li><strong>Distributeurs</strong> : <a href="http://www.mouser.fr" target="_blank">Mouser Electronics</a></li>
+				<li>
+					<strong>Sites à consulter</strong> :
+					<a href="https://www.ghielectronics.com/" target="_blank">GHI ELECTRONICS</a>
+				</li>
+				<li>
+					<strong>Distributeurs</strong> :
+					<a href="http://www.mouser.fr" target="_blank">Mouser Electronics</a>
+				</li>
 			</ul>
 			<hr>
 
 			<h3 id="LOG">2. LE LOGICIEL</h3>
 			<hr>
 			<h4 id="REP">2.1 Contenu du répertoire proposé au téléchargement</h4>
-			<p> Le répertoire proposé au téléchargement (au format zip ou tar.gz) contient la solution <strong>NetduinoI2CLCD</strong>				composée :
+			<p> Le répertoire proposé au téléchargement (au format zip ou tar.gz) contient la solution
+				<strong>NetduinoI2CLCD</strong> composée :
 			</p>
 			<ul>
-				<li>Du projet <strong>I2CLCD </strong> : le <strong>code source</strong> de la classe <em>I2CLcd</em>.</li>
-				<li>Du projet <strong>TestI2CLCD </strong>: un exemple d'utilisation de cette classe.</li>
+				<li>Du projet
+					<strong>I2CLCD </strong> : le
+					<strong>code source</strong> de la classe
+					<em>I2CLcd</em>.</li>
+				<li>Du projet
+					<strong>TestI2CLCD </strong>: un exemple d'utilisation de cette classe.</li>
 			</ul>
 			<hr>
 			<h4 id="NUGET">2.2 Le NuGet MicroToolsKit</h4>
-			<p>La dernière version <strong>compilée</strong> de la classe <strong>I2CLcd</strong> se situe dans la bibliothèque <strong>MicroToolsKit</strong>				disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>.</em>
+			<p>La dernière version
+				<strong>compilée</strong> de la classe
+				<strong>I2CLcd</strong> se situe dans la bibliothèque
+				<strong>MicroToolsKit</strong> disponible sur
+				<a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>.</em>
 			</p>
-			<p align="center"><img src="images/NuGet-large.png" /></p>
-			<p><strong>Organisation des classes</strong> contenues dans MicroToolsKit
+			<p align="center">
+				<img src="images/NuGet-large.png" />
+			</p>
+			<p>
+				<strong>Organisation des classes</strong> contenues dans MicroToolsKit
 				<a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit" target="_blank">[lien]</a>
 			</p>
-			<p><em>Installer cette bibliothèque dans le projet simplifie l'utilisation de cette classe.</em></p>
+			<p>
+				<em>Installer cette bibliothèque dans le projet simplifie l'utilisation de cette classe.</em>
+			</p>
 			<hr>
 
 			<h4 id="WIKI">2.3 Le wiki .NetMF v4.3</h4>
 			<ul>
-				Un wiki est dédié au <strong>microframework .Net v4.3</strong>. Il propose au téléchargement : 
-<li>Des <strong>exemples</strong> de code pour les cartes <strong>Netduino</strong>, <strong>GHI FEZ (Panda 3 , BrainPad etc.) </strong>. <a href=" http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf"  target="_blank">[lien]</a></li>
+				Un wiki est dédié au
+				<strong>microframework .Net v4.3</strong>. Il propose au téléchargement :
+				<li>Des
+					<strong>exemples</strong> de code pour les cartes
+					<strong>Netduino</strong>,
+					<strong>GHI FEZ (Panda 3, BrainPad, etc.) </strong>.
+					<a href=" http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">[lien]</a>
+				</li>
 
 			</ul>
 
@@ -183,33 +292,57 @@
 
 			<h4 id="DESC">2.4 Description et utilisation de la classe I2CLcd</h4>
 			<ul>
-				<li><strong>Rôle: </strong>Contrôler un afficheur à PCF2119 via un bus I²C.</li>
-				<li><strong>Assembly: </strong> <em>MicroToolsKit</em> (disponible sur
+				<li>
+					<strong>Rôle: </strong>Contrôler un afficheur à PCF2119 via un bus I²C.</li>
+				<li>
+					<strong>Assembly: </strong>
+					<em>MicroToolsKit</em> (disponible sur
 					<a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>)</li>
-				<li><strong>Espace de noms: </strong><em>Microtoolskit.Hardware.Displays</em></li>
+				<li>
+					<strong>Espace de noms: </strong>
+					<em>Microtoolskit.Hardware.Displays</em>
+				</li>
 			</ul>
 			<hr>
 
-			<p><strong>Création d'un projet avec l'IDE Visual Studio</strong></p>
+			<p>
+				<strong>Création d'un projet avec l'IDE Visual Studio</strong>
+			</p>
 			<ol>
 				<li>
-          <strong>Créer </strong>un nouveau projet en suivant la démarche décrite dans le chapitre
-          <em>"Premier programme en C# étape par étape"</em> avec à une carte <strong>Netduino</strong> ou avec une carte
-          <strong>Fez (Panda 3, BrainPad etc)</strong>.
-          <a href=" http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf " target="_blank">[lien]</a>
-</li>
-				<li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>					(disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans le
-					répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> puis <em>Gérer les packages NuGet...</em>)</li>
-				<li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.Displays </strong>dans l'en-tête du fichier
-					source.
+					<strong>Créer </strong>un nouveau projet en suivant la démarche décrite dans le chapitre
+					<em>"Premier programme en C# étape par étape"</em> avec à une carte
+					<strong>Netduino</strong> ou avec une carte
+					<strong>Fez (Panda 3, BrainPad, etc.)</strong>.
+					<a href=" http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf " target="_blank">[lien]</a>
 				</li>
-				<li><strong>Créer</strong> un objet en utilisant un des constructeurs <em>I2CLcd</em>.</li>
-				<li><strong>Initialiser</strong> le LCD avec la méthode <em>Init</em>.</li>
-				<li><strong>Effacer l'écran</strong> avec la méthode <em>ClearScreen</em>.</li>
-				<li><strong>Utiliser</strong> les autres méthodes pour gérer l'affichage.</li>
+				<li>
+					<strong>Utiliser</strong> le gestionnaire de paquets NuGet pour
+					<strong>ajouter</strong> l'assembly
+					<strong>MicroToolsKit</strong> (disponible sur
+					<a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans le répertoire
+					<em>Références</em> du projet.(clic droit sur
+					<em>Références</em> puis
+					<em>Gérer les packages NuGet...</em>)</li>
+				<li>
+					<strong>Ajouter</strong> l'espace de noms
+					<strong>Microtoolskit.Hardware.Displays </strong>dans l'en-tête du fichier source.
+				</li>
+				<li>
+					<strong>Créer</strong> un objet en utilisant un des constructeurs
+					<em>I2CLcd</em>.</li>
+				<li>
+					<strong>Initialiser</strong> le LCD avec la méthode
+					<em>Init</em>.</li>
+				<li>
+					<strong>Effacer l'écran</strong> avec la méthode
+					<em>ClearScreen</em>.</li>
+				<li>
+					<strong>Utiliser</strong> les autres méthodes pour gérer l'affichage.</li>
 			</ol>
 			<hr>
-			<strong>Exemple</strong><br>
+			<strong>Exemple</strong>
+			<br>
 			<pre>
 using System;
 using System.Threading;
@@ -251,158 +384,292 @@ namespace FezPanda
 }
 			</pre>
 			<hr>
-			<p><strong>Constructeurs</strong></p>
+			<p>
+				<strong>Constructeurs</strong>
+			</p>
 			<table>
 				<tr>
 					<td></td>
-					<td><strong>Syntaxe</strong></td>
-					<td><strong>Description</strong></td>
-				</tr>
-				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>I2CLcd</strong>()</td>
-					<td>Instancie un objet "I2CLcd" avec les paramètres : <br/> - Fabricant = Midas <br/> - Fréquence du bus: 100kHz</td>
-				</tr>
-				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits)</em></td>
 					<td>
-						Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits: </em>adresse I²C sur 7 bits attribuée à l'afficheur. <br/>
+						<strong>Syntaxe</strong>
+					</td>
+					<td>
+						<strong>Description</strong>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>I2CLcd</strong>()</td>
+					<td>Instancie un objet "I2CLcd" avec les paramètres :
+						<br/> - Fabricant = Midas
+						<br/> - Fréquence du bus: 100kHz</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>I2CLcd</strong>(
+						<strong>byte</strong>
+						<em>I2C_Add_7bits)</em>
+					</td>
+					<td>
+						Instancie un objet "I2CLcd".
+						<br>
+						<em>I2C_Add_7bits: </em>adresse I²C sur 7 bits attribuée à l'afficheur.
+						<br/>
 						<ul>
-							<li><strong>Midas</strong> (0x3a)</li>
-							<li><strong>Batron</strong> (0x3b)</li>
+							<li>
+								<strong>Midas</strong> (0x3a)</li>
+							<li>
+								<strong>Batron</strong> (0x3b)</li>
 						</ul>
 						Fréquence du bus: 100kHz.
 					</td>
 				</tr>
 				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>)</td>
-					<td>Instancie un objet "I2CLcd". <em>ManufacturerName: </em>nom du fabricant.<br/> Il correspond à l'adresse I²C du LCD
-						:
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>I2CLcd</strong>(
+						<strong>LcdManufacturer</strong>
+						<em>ManufacturerName</em>)</td>
+					<td>Instancie un objet "I2CLcd".
+						<em>ManufacturerName: </em>nom du fabricant.
+						<br/> Il correspond à l'adresse I²C du LCD :
 						<ul>
-							<li><strong>Midas</strong> (0x3a)</li>
-							<li><strong>Batron</strong> (0x3b)</li>
+							<li>
+								<strong>Midas</strong> (0x3a)</li>
+							<li>
+								<strong>Batron</strong> (0x3b)</li>
 						</ul>
 						Fréquence du bus: 100kHz.
 					</td>
 				</tr>
 				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>I2CLcd</strong>(<strong>byte</strong> <em>I2C_Add_7bits</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
-					<td>Instancie un objet "I2CLcd". <br> <em>I2C_Add_7bits</em> est l'adresse I²C sur 7 bits attribuée à l'afficheur. <br>
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>I2CLcd</strong>(
+						<strong>byte</strong>
+						<em>I2C_Add_7bits</em>,
+						<strong>Int16</strong>
+						<em>Frequency</em>)</td>
+					<td>Instancie un objet "I2CLcd".
+						<br>
+						<em>I2C_Add_7bits</em> est l'adresse I²C sur 7 bits attribuée à l'afficheur.
+						<br>
 						<ul>
-							<li><strong>Midas</strong> (0x3a)</li>
-							<li><strong>Batron</strong> (0x3b)</li>
+							<li>
+								<strong>Midas</strong> (0x3a)</li>
+							<li>
+								<strong>Batron</strong> (0x3b)</li>
 						</ul>
 						<em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz]. </td>
-					<br><br>
-					<strong>Exemple</strong><br>
+					<br>
+					<br>
+					<strong>Exemple</strong>
+					<br>
 					<em>I2CLcd lcd = new I2CLcd(I2CLcd.LcdManufacturer.BATRON, Freq);</em>
 				</tr>
 				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>I2CLcd</strong>(<strong>LcdManufacturer</strong> <em>ManufacturerName</em>, <strong>Int16</strong> <em>Frequency</em>)</td>
-					<td>Instancie un objet "I2CLcd". <em>ManufacturerName</em> est le nom du fabricant.<br/> Il correspond à l'adresse I2C du
-						LCD :
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>I2CLcd</strong>(
+						<strong>LcdManufacturer</strong>
+						<em>ManufacturerName</em>,
+						<strong>Int16</strong>
+						<em>Frequency</em>)</td>
+					<td>Instancie un objet "I2CLcd".
+						<em>ManufacturerName</em> est le nom du fabricant.
+						<br/> Il correspond à l'adresse I2C du LCD :
 						<ul>
-							<li><strong>Midas</strong> (0x3a)</li>
-							<li><strong>Batron</strong> (0x3b)</li>
+							<li>
+								<strong>Midas</strong> (0x3a)</li>
+							<li>
+								<strong>Batron</strong> (0x3b)</li>
 						</ul>
 						<em>Frequency</em> est à définir dans l'intervalle [100kHz,400kHz].
 					</td>
 				</tr>
 			</table>
 
-			<p><strong>Enumérations</strong></p>
+			<p>
+				<strong>Enumérations</strong>
+			</p>
 			<table width="100%">
 				<tr>
 					<td></td>
-					<td><strong>Syntaxe</strong></td>
-					<td><strong>Description</strong></td>
-				</tr>
-				<tr>
-					<td><img src="images/Enumerator_16x.png"></td>
-					<td><strong>LcdManufacturer</strong></td>
 					<td>
-						MIDAS : 0x3a (par défaut) BATRON : 0x3b <br/>
+						<strong>Syntaxe</strong>
+					</td>
+					<td>
+						<strong>Description</strong>
 					</td>
 				</tr>
 				<tr>
-					<td><img src="images/Enumerator_16x.png"></td>
-					<td><strong>CursorType</strong></td>
 					<td>
-						<strong><em>Blink</em></strong> : clignotant (par défaut)<br/>
-						<strong><em>Hide</em></strong> : caché <br />
-						<strong><em>Underline</em></strong> : soulignement
+						<img src="images/Enumerator_16x.png">
+					</td>
+					<td>
+						<strong>LcdManufacturer</strong>
+					</td>
+					<td>
+						MIDAS : 0x3a (par défaut) BATRON : 0x3b
+						<br/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/Enumerator_16x.png">
+					</td>
+					<td>
+						<strong>CursorType</strong>
+					</td>
+					<td>
+						<strong>
+							<em>Blink</em>
+						</strong> : clignotant (par défaut)
+						<br/>
+						<strong>
+							<em>Hide</em>
+						</strong> : caché
+						<br />
+						<strong>
+							<em>Underline</em>
+						</strong> : soulignement
 					</td>
 				</tr>
 			</table>
 
-			<p><strong>Méthodes</strong></p>
+			<p>
+				<strong>Méthodes</strong>
+			</p>
 			<table>
 				<tr>
 					<td></td>
-					<td><strong>Syntaxe</strong></td>
-					<td><strong>Description</strong></td>
-				</tr>
-				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>void ClearScreen</strong>()</td>
-					<td>Efface l'écran (2 x 16 caractères).</td>
-				</tr>
-				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>void Init</strong>()</td>
-					<td>Initialise l'afficheur en mode 2 x 16 caractères. A utiliser en premier après la construction de l'objet.</td>
-				</tr>
-				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>void LineBegin</strong>(<strong>byte</strong> <em>x</em>)</td>
 					<td>
-						<p>Fixe le début de la ligne.</p>
-						<p><em>x</em>: position en x sur l'afficheur (0..15).</p>
+						<strong>Syntaxe</strong>
+					</td>
+					<td>
+						<strong>Description</strong>
 					</td>
 				</tr>
 				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>void PutChar</strong>(<strong>byte</strong> <em>x_pos</em>, <strong>byte</strong> <em>y_pos</em>, <strong>byte</strong>						<em>z_char</em>)</td>
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>void ClearScreen</strong>()</td>
+					<td>Efface l'écran (2 x 16 caractères).</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>void Init</strong>()</td>
+					<td>Initialise l'afficheur en mode 2 x 16 caractères. A utiliser en premier après la construction de l'objet.</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>void LineBegin</strong>(
+						<strong>byte</strong>
+						<em>x</em>)</td>
+					<td>
+						<p>Fixe le début de la ligne.</p>
+						<p>
+							<em>x</em>: position en x sur l'afficheur (0..15).</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>void PutChar</strong>(
+						<strong>byte</strong>
+						<em>x_pos</em>,
+						<strong>byte</strong>
+						<em>y_pos</em>,
+						<strong>byte</strong>
+						<em>z_char</em>)</td>
 					<td>
 						<p>Ecrit un caractère (z_char) aux coordonnées (x_pos, y_pos) de l'afficheur.
-							<p><em>x_pos</em>: position en x sur l'afficheur (0..15).</p>
-							<p><em>y_pos</em>: position en y sur l'afficheur (0..1).</p>
-							<p><em>z_char</em>: caractère à afficher.</p>
-							<br><br>
-							<strong>Exemple</strong><br>
+							<p>
+								<em>x_pos</em>: position en x sur l'afficheur (0..15).</p>
+							<p>
+								<em>y_pos</em>: position en y sur l'afficheur (0..1).</p>
+							<p>
+								<em>z_char</em>: caractère à afficher.</p>
+							<br>
+							<br>
+							<strong>Exemple</strong>
+							<br>
 							<em>lcd.PutChar(14, 0, 0x11); </em>
 					</td>
 				</tr>
 				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>void PutString</strong>(<strong>byte</strong> <em>x_pos</em>, <strong>byte</strong> <em>y_pos</em>, <strong>string</strong>						<em>Text</em>)</td>
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>void PutString</strong>(
+						<strong>byte</strong>
+						<em>x_pos</em>,
+						<strong>byte</strong>
+						<em>y_pos</em>,
+						<strong>string</strong>
+						<em>Text</em>)</td>
 					<td>
 						<p>Ecrit une chaîne de caractères (Text) aux coordonnées (x_pos, y_pos) de l'afficheur.
-							<p><em>x_pos</em>: position en x sur l'afficheur (0..15).</p>
-							<p><em>y_pos</em>: position en y sur l'afficheur (0..1).</p>
-							<p><em>Text</em>: Chaîne à afficher.</p>
-							<strong>Exemple</strong><br>
+							<p>
+								<em>x_pos</em>: position en x sur l'afficheur (0..15).</p>
+							<p>
+								<em>y_pos</em>: position en y sur l'afficheur (0..1).</p>
+							<p>
+								<em>Text</em>: Chaîne à afficher.</p>
+							<strong>Exemple</strong>
+							<br>
 							<em> lcd.PutString(2, 0, "Hello");</em>
 					</td>
 				</tr>
 				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>void SelectCursor</strong>(<strong>CursorType</strong> <em>posCursorx</em>)</td>
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>void SelectCursor</strong>(
+						<strong>CursorType</strong>
+						<em>posCursorx</em>)</td>
 					<td>
 						<p>Sélection du curseur</p>
-						<p><em>CursorType</em>: Hide, Underline, Blink</p>
+						<p>
+							<em>CursorType</em>: Hide, Underline, Blink</p>
 					</td>
 				</tr>
 				<tr>
-					<td><img src="images/Method_16x.png"></td>
-					<td><strong>void SetBacklight</strong>(<strong>byte</strong> <em>bright</em>)</td>
+					<td>
+						<img src="images/Method_16x.png">
+					</td>
+					<td>
+						<strong>void SetBacklight</strong>(
+						<strong>byte</strong>
+						<em>bright</em>)</td>
 					<td>
 						<p>Réglage du contraste de l'afficheur</p>
-						<p><em>bright</em>: 20 dark -> 0 light</p>
+						<p>
+							<em>bright</em>: 20 dark -> 0 light</p>
 					</td>
 				</tr>
 			</table>
@@ -411,9 +678,15 @@ namespace FezPanda
 	<!-- FOOTER  -->
 	<div id="footer_wrap" class="outer">
 		<footer class="inner">
-			<p class="copyright">Description de la classe <strong><em>I2CLcd</em></strong> développée en C# sous .NETMF 4.3 pour les cartes Netduino, et
-				FEZ (PANDA, COBRA...) maintened by <a href="https://github.com/WebGE">WebGE</a></p>
-			<p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+			<p class="copyright">Description de la classe
+				<strong>
+					<em>I2CLcd</em>
+				</strong> développée en C# sous .NETMF 4.3 pour les cartes Netduino, et FEZ (PANDA, COBRA...) maintened by
+				<a href="https://github.com/WebGE">WebGE</a>
+			</p>
+			<p>Published with
+				<a href="http://pages.github.com">GitHub Pages</a>
+			</p>
 		</footer>
 	</div>
 </body>
