@@ -28,6 +28,7 @@ This class is also in the [MicroToolsKit](https://www.nuget.org/packages/WEBGE.M
   * **I2CLCD** : .NetMF class
 
 ![I2CLCD](img/I2CLCDClass.PNG)
+
 * **Netduino** : class test program for Netduino board
 * **FezPanda** : class test program for Fez Panda board
 
@@ -68,4 +69,3 @@ any
 * [MicroToolsKit library](http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit) (English)
 
 **Maintened by** [WebGe](mailto:philippemariano@gmail.com)
-
